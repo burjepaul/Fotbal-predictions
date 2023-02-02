@@ -3,6 +3,9 @@
   --color-title: wheat;
   --color-text: rgb(95, 67, 14);
   --color-components: rgba(29, 85, 3, 0.836);
+  --color-win:rgb(16, 109, 16);
+  --color-lost: rgb(136, 16, 16);
+  --color-postponed: rgb(18, 18, 97);
   
   --step--2: clamp(0.22rem, calc(0.27rem + -0.07vw), 0.26rem);
   --step--1: clamp(0.31rem, calc(0.31rem + 0.04vw), 0.33rem);

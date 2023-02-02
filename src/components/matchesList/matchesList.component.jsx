@@ -1,11 +1,11 @@
-import TodayMatch from '../match/match.component';
+import Match from '../match/match.component';
 import './matchesList.styles.scss'
 
-const TodayMatchesList = (props) => {
+const MatchesList = (props) => {
   return (
     <div className='matches-list'>
       {props.matches.map((match) => (
-        <TodayMatch
+        <Match
           key={match.id}
           playing_date={match.playing_date}
           country={match.country}
@@ -15,10 +15,11 @@ const TodayMatchesList = (props) => {
           prediction={match.prediction}
           odd={match.odd}
           playing_hour={match.playing_hour}
+          result={match.result}
         />
       ))}
     </div>
   );
 };
 
-export default TodayMatchesList;
+export default MatchesList;

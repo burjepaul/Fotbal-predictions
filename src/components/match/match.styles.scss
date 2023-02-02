@@ -36,9 +36,13 @@ body{
 .match .predictionodd{
   display: flex;
   justify-content: space-between;
-  margin-right: 5%;
+  margin-right: 8%;
 }
 
 .prediction{
   margin-right: 20%;
+}
+
+.result{
+  margin-left: 20%;
 }

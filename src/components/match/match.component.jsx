@@ -1,9 +1,17 @@
+/* eslint-disable eqeqeq */
+import { Fragment } from 'react';
 import './match.styles.scss'
 
-const TodayMatch = (props) => {
-  const {playing_date, playing_hour, country, league, home_team, away_team, prediction, odd} = props
+const Match = (props) => {
+  const {playing_date, playing_hour, country, league, home_team, away_team, prediction, odd, result} = props
     return (
-      <div className='match'>
+      <div className='match' 
+           style={ result == undefined ? {backgroundColor: "var(--color-components)"} : 
+                  result === 'WIN' ? {backgroundColor: "var(--color-win)"} : 
+                  result === 'LOST'? {backgroundColor: "var(--color-lost)"}:
+                  {backgroundColor: "var(--color-postponed)"}
+                }  
+        >
         <div  className='date'>
           <h5>{playing_date} at {playing_hour}</h5>
         </div>
@@ -18,17 +26,27 @@ const TodayMatch = (props) => {
             <h3>Prediction</h3>
             <h4>{prediction}</h4>
           </div>
-          {odd ? 
-            <div className='odd'>
-              <h3>Odd</h3>
-              <h4>{odd === 0 ? '-':odd}</h4>
-            </div>
-          :
-          null
+          <div className='odd'>
+            {odd == undefined ? 
+            null :
+              <Fragment>
+                <h3>Odd</h3>
+                <h4>{odd === 0 ? '-':odd}</h4>
+              </Fragment>
           }
+            </div>
+           <div className='result'>
+            {result == undefined ? 
+            null :
+              <Fragment>
+                <h3>Result</h3>
+                <h4>{result}</h4>
+              </Fragment>
+            }
+            </div>
         </div>
       </div>
     );
   };
   
-  export default TodayMatch;
+  export default Match;

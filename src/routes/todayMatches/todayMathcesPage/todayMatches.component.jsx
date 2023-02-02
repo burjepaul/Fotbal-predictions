@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import Spinner from '../../../components/spinner/spinner';
-import TodayMatchesList from '../../../components/matchesList/matchesList.component';
+import MatchesList from '../../../components/matchesList/matchesList.component';
 
 import './todayMatches.styles.scss'
 
@@ -35,7 +35,7 @@ const TodayMatches = () => {
         let content;
 
         if (!isLoadingData){
-            content =  <TodayMatchesList matches={toadyMatches} />
+            content =  <MatchesList matches={toadyMatches} />
         }
 
         if (!isLoadingData && error){
