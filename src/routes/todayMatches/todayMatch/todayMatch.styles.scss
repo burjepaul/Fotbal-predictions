@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri&family=Noto+Serif+Ahom&display=swap');
+
+.match {
+  padding-left:max(1.5vh, 1rem);
+  padding-right:max(1.5vh, 1rem);
+  margin-bottom: max(2vh, 1rem);
+  background-color: var(--color-components);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 6px;
+  text-align: center;
+  color: #ac7903;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Amiri', 'Noto Serif Ahom', serif;
+}
+
+body{
+  font-size: var(--step-2);
+}
+
+.match h3 {
+  font-size: var(--step-3);
+  color: var(--color-title)
+}
+
+.match h4 {
+  font-size: var(--step-2);
+}
+
+.match .matchDetails{
+  padding-left:max(2vh, 0.8rem);
+  padding-right:max(2vh, 0.8rem);
+}
+
+.match .predictionodd{
+  display: flex;
+  justify-content: space-between;
+  margin-right: 5%;
+}
+
+.prediction{
+  margin-right: 20%;
+}

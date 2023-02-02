@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import Navigation from "./routes/navigation/navigation.component";
+import Home from "./routes/home/home.component";
+
+import YesterdayResults from "./routes/yesterdayResults/yesterdayResults.component";
+import TomorrowPredictions from "./routes/tomorrowPredictions/tomorrowPredictions.component";
+import ResultHistory from "./routes/resultHistory/resultHistory.component";
+import Statistics from "./routes/statistics/statistics.component";
+import TodayMatches from "./routes/todayMatches/todayMathcesPage/todayMatches.component";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path='/' element={<Navigation/>}>
+        <Route index element={<Home/>}/>
+        <Route path='/yesterdayResults' element={<YesterdayResults/>}/>
+        <Route path='/todayMatches' element={<TodayMatches/>}/>
+        <Route path='/tomorrowPredictions' element={<TomorrowPredictions/>}/>
+        <Route path='/resultHistory' element={<ResultHistory/>}/>
+        <Route path='/statistics' element={<Statistics/>}/>
+      </Route>
+    </Routes>
   );
 }
 

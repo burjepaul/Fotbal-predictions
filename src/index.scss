@@ -1,0 +1,38 @@
+:root{
+  --color-background: black;
+  --color-title: wheat;
+  --color-text: rgb(95, 67, 14);
+  --color-components: rgba(29, 85, 3, 0.836);
+  
+  --step--2: clamp(0.22rem, calc(0.27rem + -0.07vw), 0.26rem);
+  --step--1: clamp(0.31rem, calc(0.31rem + 0.04vw), 0.33rem);
+  --step-0: clamp(0.38rem, calc(0.33rem + 0.22vw), 0.50rem);
+  --step-1: clamp(0.45rem, calc(0.35rem + 0.52vw), 0.75rem);
+  --step-2: clamp(0.54rem, calc(0.34rem + 1.02vw), 1.13rem);
+  --step-3: clamp(0.65rem, calc(0.29rem + 1.81vw), 1.69rem);
+  --step-4: clamp(0.78rem, calc(0.17rem + 3.05vw), 2.53rem);
+  --step-5: clamp(0.93rem, calc(-0.06rem + 4.98vw), 3.80rem);
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Amiri','Nanum Myeongjo','Noto Serif Ahom',sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-background)
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a {
+  text-decoration: none;
+  color:var(--color-text)
+}
+
+*{
+  box-sizing: border-box;
+}
