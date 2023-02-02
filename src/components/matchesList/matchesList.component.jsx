@@ -1,5 +1,5 @@
-import TodayMatch from '../todayMatch/todayMatch.component';
-import './todayMatchesList.styles.scss'
+import TodayMatch from '../match/match.component';
+import './matchesList.styles.scss'
 
 const TodayMatchesList = (props) => {
   return (

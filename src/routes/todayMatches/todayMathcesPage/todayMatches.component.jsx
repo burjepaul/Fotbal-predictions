@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import Spinner from '../../../components/spinner/spinner';
-import TodayMatchesList from '../todayMatchesList/todayMatchesList.component';
+import TodayMatchesList from '../../../components/matchesList/matchesList.component';
 
 import './todayMatches.styles.scss'
 
