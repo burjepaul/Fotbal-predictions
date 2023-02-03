@@ -44,13 +44,17 @@ const ResultHistory = () => {
 
     let content;
 
+    
     if (!isLoadingData){
         content =  <MatchesList matches={toadyMatches} />
     }
-
+    
     if (!isLoadingData && error){
         content = <p>{error}</p>
     }
+
+    if(!isLoadingData && toadyMatches.length === 0)
+        content = <p>No recorded data for this day</p>
 
     if (isLoadingData){
         content = <Spinner/>

@@ -23,7 +23,8 @@
         margin-top: 2vh;
         padding: 10px 25px;
         cursor: pointer;
-        font-size: var(--step-3)
+        font-size: var(--step-3);
+        white-space: nowrap;
       }
     }
   }
