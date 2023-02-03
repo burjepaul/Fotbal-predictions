@@ -13,7 +13,7 @@ const YesterdayResults = () => {
         setIsLoadingData(true)
         setError(null)
         try{
-            const response = await fetch('https://fotbal.herokuapp.com/matches/yesterdaysResults')
+            const response = await fetch('https://fotbal.herokuapp.com/matches/yesterdayResults/')
             if (!response.ok){
             throw new Error('Something went wrong!')
             }
