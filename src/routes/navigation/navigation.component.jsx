@@ -41,16 +41,16 @@ const Navigation = () => {
                 </nav>
 
                 <div className={menu_class}>
-                        <Link className="nav-link-mini" to='/shop'>
+                        <Link className="nav-link-mini" to='/aboutus'>
                             About us
                         </Link>
-                        <Link className="nav-link-mini" to='/shop'>
+                        <Link className="nav-link-mini" to='/forum'>
                             Forum
                         </Link>
-                        <Link className="nav-link-mini" to='/shop'>
+                        <Link className="nav-link-mini" to='/contact'>
                             Contact
                         </Link>
-                        <Link className="nav-link-mini" to='/shop'>
+                        <Link className="nav-link-mini" to='/signin'>
                             Sign In
                         </Link>
                 </div>
@@ -67,16 +67,16 @@ const Navigation = () => {
                     <Logo className="logo"/>
                 </Link>
                 <div className="nav-links-container">
-                    <Link className="nav-link" to='/shop'>
+                    <Link className="nav-link" to='/aboutus'>
                         About us
                     </Link>
-                    <Link className="nav-link" to='/shop'>
+                    <Link className="nav-link" to='/forum'>
                         Forum
                     </Link>
-                    <Link className="nav-link" to='/shop'>
+                    <Link className="nav-link" to='/contact'>
                         Contact
                     </Link>
-                    <Link className="nav-link" to='/shop'>
+                    <Link className="nav-link" to='/signin'>
                         Sign In
                     </Link>
                 </div>

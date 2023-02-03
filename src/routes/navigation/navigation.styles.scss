@@ -22,10 +22,19 @@
   
       .nav-link {
         margin-top: 2vh;
+        margin-right: 1vh;
         padding: 10px 25px;
         cursor: pointer;
         font-size: var(--step-3);
         white-space: nowrap;
+        border-radius: 10px;
+        transition: 1s;
+      }
+
+      .nav-link:hover{
+        background-color: rgb(68, 66, 66);
+        color: var(--color-title);
+        transform: scale(1.1)
       }
     }
   }

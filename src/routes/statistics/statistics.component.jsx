@@ -2,7 +2,7 @@ import './statistics.styles.scss'
 
 const Statistics = () => {
     return (
-        <h1>Statistics</h1>
+        <h1>Under Construction</h1>
     )
 }
 
