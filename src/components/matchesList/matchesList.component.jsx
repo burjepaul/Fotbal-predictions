@@ -4,8 +4,12 @@ import './matchesList.styles.scss'
 import { useState } from 'react';
 
 const MatchesList = (props) => {
+
+  const dropDownText = ["Playing hour", "Win Chance", "Odd", "Country"]
+
   const [dropDown, setDropDown] = useState(false)
   const [dropDownClass, setDropDownClass] = useState("drop-down-menu hide")
+  const [activeDropDown, setActiveDropDown] = useState(dropDownText)
 
   const handleDropDown = () => {
     if (!dropDown){
@@ -17,16 +21,41 @@ const MatchesList = (props) => {
     }
   }
 
+  const handleDropDownItem1 = () => {
+    const temp = activeDropDown[0]
+    activeDropDown[0] = activeDropDown[1]
+    activeDropDown[1] = temp
+    setActiveDropDown(activeDropDown)
+    setDropDown(!dropDown)
+    setDropDownClass("drop-down-menu hide")
+  }
+  const handleDropDownItem2 = () => {
+    const temp = activeDropDown[0]
+    activeDropDown[0] = activeDropDown[2]
+    activeDropDown[2] = temp
+    setActiveDropDown(activeDropDown)
+    setDropDown(!dropDown)
+    setDropDownClass("drop-down-menu hide")
+  }
+  const handleDropDownItem3 = () => {
+    const temp = activeDropDown[0]
+    activeDropDown[0] = activeDropDown[3]
+    activeDropDown[3] = temp
+    setActiveDropDown(activeDropDown)
+    setDropDown(!dropDown)
+    setDropDownClass("drop-down-menu hide")
+  }
+
 
   return (
     <div className='matches-list'>
       <div className='sort-component'>
         <h2>Sort by :&nbsp;&nbsp;
-          <button onClick={handleDropDown}><DropDownArrow/> Playing hour</button>
+          <button onClick={handleDropDown}><DropDownArrow/>&nbsp;&nbsp;{activeDropDown[0]}</button>
         <div className={dropDownClass}>
-          <div class='drop-down-item'>Win Chance</div>
-          <div class='drop-down-item'>Odd</div>
-          <div class='drop-down-item'>Country</div>
+          <div className='drop-down-item' onClick={handleDropDownItem1}>{activeDropDown[1]}</div>
+          <div className='drop-down-item' onClick={handleDropDownItem2}>{activeDropDown[2]}</div>
+          <div className='drop-down-item' onClick={handleDropDownItem3}>{activeDropDown[3]}</div>
         </div>
         </h2>
       </div>
