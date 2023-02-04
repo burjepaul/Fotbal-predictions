@@ -1,5 +1,75 @@
 .matches-list {
     margin: 0;
-    padding: 5%;
+    padding: 1% 2%;
+     
+    .sort-component {
+      padding: 1%;
+      position: relative;
+      display:flow-root;
+      right: 0;
+
+      h2{ 
+        color: var(--color-title);
+        padding-bottom: 2%;
+        float: right;
+        }
+      button{
+        font-size: var(--step-2);
+        background-color: var(--color-text);
+        padding: 0.7rem;
+        color: var(color-title);
+        border-radius: 2px;
+        border: 2px solid var(--color-title);
+        cursor: pointer;
+        transition: 1s;
+      }
+
+      button:hover{
+        transform: scale(1.1);
+      }
+      .hidden{
+        display: none;
+      }
+
+      .hide{
+        opacity: 0;
+        transition: all 0.3s ease-in;
+        transform: translateY(-150%);
+      }
+
+      .visible{
+        transform: translateY(0); /* here */
+        transition: all 0.3s ease-in;
+        opacity: 1;
+      }
+  
+      .drop-down-menu{
+        background-color: var(--color-background);
+        width:fit-content;
+        text-align: center;
+        z-index: 1;
+        position: absolute;
+        color:var(--color-text);
+        white-space: nowrap;
+        right: 1%;
+        font-size: var(--step-2);
+      }
+      
+      .drop-down-item{
+        padding: 0.5rem 2rem;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+      }
+
+      .drop-down-item:hover{
+        background-color: rgb(68, 66, 66);
+        color: var(--color-title);
+        cursor: pointer;
+      }
+  
+      .drop-down-item:not(:last-child){
+        border-bottom: 1px solid var(--color-title);
+    }
+      }
   }
   
