@@ -22,32 +22,30 @@
         border: 2px solid var(--color-title);
         cursor: pointer;
         transition: 1s;
+        z-index: 2;
       }
 
       button:hover{
         transform: scale(1.1);
       }
-      .hidden{
-        display: none;
-      }
 
       .hide{
         opacity: 0;
-        transition: all 0.3s ease-in;
-        transform: translateY(-150%);
+        transform: translateY(-40%);
+        z-index: -1;
       }
 
       .visible{
-        transform: translateY(0); /* here */
+        transform: translateY(0);
         transition: all 0.3s ease-in;
         opacity: 1;
+        z-index: 1;
       }
   
       .drop-down-menu{
         background-color: var(--color-background);
         width:fit-content;
         text-align: center;
-        z-index: 1;
         position: absolute;
         color:var(--color-text);
         white-space: nowrap;
