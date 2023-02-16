@@ -41,14 +41,15 @@ const Statistics = () => {
             <h1>Statistics</h1>
             <div className='statistics-container'>
                 <div className='win-percentage-odds'>
-                    <h1>Wins by odd</h1>
+                    <h2>Wins by odd</h2>
+                    <br></br>
                         <form onSubmit={(e) => {
                             e.preventDefault()
                             setOddQuerry(oddValue)
                             setOddUnderQuerry(oddUnderValue)
                             setPredictionQuerry(prediction)
                         }}>
-                            <h2>Odds over:</h2>
+                            <h3>Odds over:</h3>
                             <input 
                                 type="number"
                                 value = {oddValue}
@@ -58,7 +59,7 @@ const Statistics = () => {
                             }
                             />
                             <br></br>
-                            <h2>Odds under:</h2>
+                            <h3>Odds under:</h3>
                             <input 
                                 type="number"
                                 value = {oddUnderValue}
@@ -68,7 +69,7 @@ const Statistics = () => {
                             }
                             />
                             <br></br>
-                            <h2>Prediction result:</h2>
+                            <h3>Prediction result:</h3>
                             
                             <select onChange={onOptionChangeHandler}>
                                 {options.map((option, index) => {
