@@ -41,6 +41,7 @@ const Statistics = () => {
             <h1>Win Percentages</h1>
             <div className='statistics-container'>
                 <div className='win-percentage-odds'>
+                    <h1>Wins by odd</h1>
                         <form onSubmit={(e) => {
                             e.preventDefault()
                             setOddQuerry(oddValue)
@@ -78,7 +79,9 @@ const Statistics = () => {
                             </select>
                             <button className="statistics-button">Find</button>
                         </form>
-                        {oddStatsResponse ? <Circle oddStats={oddStatsResponse}/> : <Spinner/>}
+                        <div className='circle'>
+                            {oddStatsResponse ? <Circle oddStats={oddStatsResponse}/> : <Spinner/>}
+                        </div>
                 </div>
                 <div className='win-percentage-country'>
                     <h2>Wins per countries:</h2>

@@ -7,6 +7,14 @@ h1{
 .statistics-container{
     display: flex;
     justify-content: space-around;
+    text-align: center;
+    
+}
+
+.win-percentage-odds{
+    background-color: rgb(29, 29, 29);
+    border-radius: 1%;
+    padding: 0% 5%;
 }
     h2{
         color:var(--color-title);
@@ -58,6 +66,8 @@ h1{
         -webkit-user-select: none;
         touch-action: manipulation;
         width: 40%;
+        margin-left: auto;
+        margin-right: auto;
         }
 
         .statistics-button:hover {
@@ -67,19 +77,15 @@ h1{
         transition-duration: 1s, 1s;
         }
 
-        .statistics-button:active {
-        box-shadow: rgba(0, 0, 0, 0.15) 0 2px 4px inset, rgba(0, 0, 0, 0.4) 0 1px 1px;
-        }
+    
+@media screen and (max-width: 950px) {
+    .statistics-container{
+        display: block;
+        margin: 10% 15%;
 
-        .statistics-button:disabled {
-        cursor: not-allowed;
-        opacity: .6;
+        .win-percentage-odds{
+            padding: 5%;
+            
         }
-
-        .statistics-button:disabled:active {
-        pointer-events: none;
-        }
-
-        .statistics-button:disabled:hover {
-        box-shadow: none;
-        }
+    }
+}
