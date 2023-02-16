@@ -34,6 +34,9 @@ h1{
         font-size: var(--step-2);
         color:var(--color-text);
     }
+    select{
+        padding-right: -7px;
+    }
 
     input:focus {
         outline: none;        

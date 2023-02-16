@@ -70,7 +70,7 @@ const Statistics = () => {
                             <br></br>
                             <h2>Prediction result:</h2>
                             
-                            <select onChange={onOptionChangeHandler} className="">
+                            <select onChange={onOptionChangeHandler}>
                                 {options.map((option, index) => {
                                     return <option key={index} >
                                       {option}
