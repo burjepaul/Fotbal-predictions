@@ -34,9 +34,6 @@ h1{
         font-size: var(--step-2);
         color:var(--color-text);
     }
-    select{
-        padding-right: -15px;
-    }
 
     input:focus, select:focus {
         outline: none;        
@@ -87,10 +84,15 @@ h1{
             padding: 5%;
             
         }
-    }
-    .statistics-button:hover {
-        text-decoration: none;
-        scale: 1.1;
-        transition-duration: 1s, 1s;
+
+        select{
+            text-align: start;
         }
+    }
+}
+.statistics-button:hover {
+    text-decoration: none;
+    box-shadow: none;
+    scale: 1.1;
+    transition-duration: 1s, 1s;
 }
