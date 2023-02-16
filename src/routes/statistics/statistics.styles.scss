@@ -38,7 +38,7 @@ h1{
         padding-right: -7px;
     }
 
-    input:focus {
+    input:focus, select:focus {
         outline: none;        
     }
 
@@ -46,9 +46,6 @@ h1{
     input::-webkit-inner-spin-button {
         -webkit-appearance: none;
         margin: 0;
-    }
-    .myBrowser{
-        background-color: white;
     }
     
     .statistics-button{
