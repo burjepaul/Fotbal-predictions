@@ -38,7 +38,7 @@ const Statistics = () => {
 
     return (
         <Fragment>
-            <h1>Win Percentages</h1>
+            <h1>Statistics</h1>
             <div className='statistics-container'>
                 <div className='win-percentage-odds'>
                     <h1>Wins by odd</h1>

@@ -35,7 +35,7 @@ h1{
         color:var(--color-text);
     }
     select{
-        padding-right: -7px;
+        padding-right: -15px;
     }
 
     input:focus, select:focus {
@@ -88,4 +88,9 @@ h1{
             
         }
     }
+    .statistics-button:hover {
+        text-decoration: none;
+        scale: 1.1;
+        transition-duration: 1s, 1s;
+        }
 }
