@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import {ReactComponent as DropDownArrow} from '../../assets/dropdown-arrow.svg'
 
+import './sortby.styles.scss'
+
 const SortBy = ({matches, handleActiveDropDownItem}) => {
     const dropDownText = ["Playing hour", "Win Chance", "Odd", "Country"]
 
@@ -49,7 +51,12 @@ const SortBy = ({matches, handleActiveDropDownItem}) => {
     return (
     <div className='sort-component'>
         <h2>Sort by :&nbsp;&nbsp;
-              <button onClick={handleDropDown}><DropDownArrow/>&nbsp;&nbsp;{activeDropDown[0]}</button>
+              <button onClick={handleDropDown}>
+                <div className='dropdown-arrow'>
+                  <DropDownArrow/>
+                  &nbsp;&nbsp;{activeDropDown[0]}
+                </div>
+              </button>
           <div className={dropDownClass}>
               <div className='drop-down-item' onClick={handleDropDownItem1}>{activeDropDown[1]}</div>
               <div className='drop-down-item' onClick={handleDropDownItem2}>{activeDropDown[2]}</div>

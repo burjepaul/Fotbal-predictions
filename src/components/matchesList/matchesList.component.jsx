@@ -43,7 +43,7 @@ const MatchesList = (props) => {
                     <PreviousPageArrow/>
                 </div>
                 <h2 className="title">Page&nbsp;&nbsp;</h2>
-                <h2>{activePage}/{totalPages}</h2>
+                <h2 className="title">{activePage}/{totalPages}</h2>
                 <div className='arrows' onClick={() => handlePages(+1)}>
                   <NextPageArrow/>
                 </div>

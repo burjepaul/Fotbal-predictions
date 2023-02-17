@@ -3,9 +3,10 @@
 .match {
   padding-left:max(1.5vh, 1rem);
   padding-right:max(1.5vh, 1rem);
-  margin-bottom: max(2vh, 1rem);
+  margin-bottom: max(2vh, 2rem);
+  padding-top: 2%;
   background-color: var(--color-components);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  box-shadow: 3px 3px 16px 2px rgba(255, 255, 255, 0.13);
   border-radius: 6px;
   text-align: center;
   color: #ac7903;
