@@ -9,3 +9,10 @@ h1{
     justify-content: space-around;
     text-align: center;
 }
+
+@media screen and (max-width: 950px) {
+    .statistics-container{
+        display: block;
+        margin: 10% 15%;
+}
+}
