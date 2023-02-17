@@ -50,7 +50,7 @@ const MatchesList = (props) => {
             </div>
         <SortBy matches={props.matches} handleActiveDropDownItem={handleActiveDropDownItem}/>
       </div>
-      {props.matches.slice(activePage * 10 - 10, activePage * 10 - 1).map((match) => (
+      {props.matches.slice(activePage * 10 - 10, activePage * 10).map((match) => (
         <Match
           key={match.id}
           playing_date={match.playing_date}
