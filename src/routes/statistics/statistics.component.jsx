@@ -1,4 +1,5 @@
 import { Fragment } from 'react'
+import ByCountry from './byCountry/byCountry.component'
 import ByOdd from './byOdd/byOdd.component'
 import './statistics.styles.scss'
 
@@ -8,10 +9,7 @@ const Statistics = () => {
             <h1>Statistics</h1>
             <div className='statistics-container'>
                 <ByOdd/>
-                <div className='win-percentage-country'>
-                    <h2>Wins per countries:</h2>
-                    
-                </div>
+                <ByCountry/>
             </div>
         </Fragment>
     )
