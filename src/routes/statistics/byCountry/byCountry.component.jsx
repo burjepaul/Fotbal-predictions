@@ -1,20 +1,23 @@
 import "./byCountry.styles.scss"
 
-import countriesAndLeagues from "../../../config/leagues.json"
 import { useEffect, useReducer, useState } from "react"
 import Circle from "../../../components/statistics-circle/statisitics-circle.components"
 import Spinner from "../../../components/spinner/spinner"
+import availableLeagues from '../../../config/leagues.json'
 
 const ByCountry = () => {
+
     const [leagueStats, setLeagueStats] = useState()
     const [missingData, setmissingData] = useState(false)
 
-    const countries = Object.keys(countriesAndLeagues)
+    
+    const countries = Object.keys(availableLeagues)
+
 
     const initialValues= {
         querryCountry: countries[0],
-        leagues: countriesAndLeagues[countries[0]],
-        querryLeague: countriesAndLeagues[countries[0]][0]
+        leagues: availableLeagues[countries[0]],
+        querryLeague: availableLeagues[countries[0]][0]
     }
 
     const ACTION_TYPES = {
@@ -28,8 +31,8 @@ const ByCountry = () => {
                 return{
                     ...state,
                     querryCountry: action.next_country,
-                    leagues: countriesAndLeagues[action.next_country],
-                    querryLeague: countriesAndLeagues[action.next_country][0]
+                    leagues: availableLeagues[action.next_country],
+                    querryLeague: availableLeagues[action.next_country][0]
                 }
             case ACTION_TYPES.CHNAGE_LEAGUE:
                 return{
@@ -60,19 +63,20 @@ const ByCountry = () => {
         setLeagueStats(null)
         setmissingData(false)
         const fetchLeagueQuery =async () => {
-            const response = await fetch(`https://fotbal.herokuapp.com/matches/statistics/?league_querry=True&country=${state.querryCountry}&league=${state.querryLeague}`)
-            if (!response.ok){
-                setmissingData(true)
-                throw new Error('Something went wrong!')
+            try{
+                const response = await fetch(`https://fotbal.herokuapp.com/matches/statistics/?league_querry=True&country=${state.querryCountry}&league=${state.querryLeague}`)
+                if (!response.ok){
+                    setmissingData(true)
+                    throw new Error('Something went wrong!')
+                }
+                const data = await response.json();
+                setLeagueStats(data)
+            }catch(e){
+                console.log(e)
             }
-            const data = await response.json();
-            setLeagueStats(data)
         }
         fetchLeagueQuery()
     },[state.querryCountry, state.querryLeague])
-
-    console.log(leagueStats)
-    console.log(missingData)
 
     let output
 
