@@ -55,7 +55,6 @@
         margin-top: 5%;
         padding: 11px 15px 12px;
         text-align: center;
-        transition: 1s ease-in-out;
         user-select: none;
         -webkit-user-select: none;
         touch-action: manipulation;
@@ -67,8 +66,7 @@
         .statistics-button:hover {
         box-shadow: rgba(255, 255, 255, 0.5) 0 0 21px;
         text-decoration: none;
-        scale: 1.1;
-        transition-duration: 1s, 1s;
+        transition-duration: 0.3s, 0.3s;
         }
 
     
@@ -87,6 +85,5 @@
 .statistics-button:hover {
     text-decoration: none;
     box-shadow: none;
-    scale: 1.1;
-    transition-duration: 1s, 1s;
+    transition-duration: 0.3s, 0.3s;
 }

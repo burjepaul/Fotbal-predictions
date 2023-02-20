@@ -12,8 +12,8 @@ const ByOdd = () => {
         oddOverQuerry: 2,
         oddUnderValue: 3,
         oddUnderQuerry: 3,
-        predictionValue: 1,
-        predictionQuerry: 1
+        predictionValue: "All",
+        predictionQuerry: "All"
     }
     
     const ACTION_TYPES = {
@@ -59,12 +59,13 @@ const ByOdd = () => {
         const onOptionChangeHandler = (e) => {
             dispatch({
                 type: ACTION_TYPES.CHANGE_PREDICTION,
-                next_prediction_value: parseInt(e.target.value) ? parseInt(e.target.value) : "X"
+                next_prediction_value: parseInt(e.target.value) ? parseInt(e.target.value) : e.target.value
             })
         }
         const [state, dispatch] = useReducer(reducer, initialValues)
         
         useEffect(() => {
+            setOddStatsResponse(null)
             const fetchOddQuery =async () => {
                 const response = await fetch(`https://fotbal.herokuapp.com/matches/statistics/?odd_over=${state.oddOverQuerry}&odd_under=${state.oddUnderQuerry}&prediction=${state.predictionQuerry}`)
                 if (!response.ok){
