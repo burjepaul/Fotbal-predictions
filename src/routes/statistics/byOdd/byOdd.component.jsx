@@ -5,7 +5,7 @@ import Circle from "../../../components/statistics-circle/statisitics-circle.com
 import "./byOdd.styles.scss"
 
 const ByOdd = () => {  
-    const [oddStatsResponse, setOddStatsResponse] = useState() 
+    const [oddStats, setOddStats] = useState() 
     
     const initialValues = {
         oddOverValue: 2,
@@ -65,14 +65,14 @@ const ByOdd = () => {
         const [state, dispatch] = useReducer(reducer, initialValues)
         
         useEffect(() => {
-            setOddStatsResponse(null)
+            setOddStats(null)
             const fetchOddQuery =async () => {
-                const response = await fetch(`https://fotbal.herokuapp.com/matches/statistics/?odd_over=${state.oddOverQuerry}&odd_under=${state.oddUnderQuerry}&prediction=${state.predictionQuerry}`)
+                const response = await fetch(`https://fotbal.herokuapp.com/matches/statistics/?odd_querry=True&odd_over=${state.oddOverQuerry}&odd_under=${state.oddUnderQuerry}&prediction=${state.predictionQuerry}`)
                 if (!response.ok){
                     throw new Error('Something went wrong!')
                 }
                 const data = await response.json();
-                setOddStatsResponse(data)
+                setOddStats(data)
             }
             fetchOddQuery()
         },[state.oddOverQuerry, state.oddUnderQuerry, state.predictionQuerry])
@@ -123,7 +123,7 @@ const ByOdd = () => {
                 <button className="statistics-button">Find</button>
             </form>
             <div className='circle'>
-                {oddStatsResponse ? <Circle oddStats={oddStatsResponse}/> : <Spinner/>}
+                {oddStats ? <Circle oddStats={oddStats}/> : <Spinner/>}
             </div>
         </div>
     )
