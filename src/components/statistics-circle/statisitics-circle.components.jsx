@@ -2,7 +2,7 @@ import "./statistics-circle.styles.scss"
 import { ReactComponent as CircleSvg } from "../../assets/circle.svg"
 
 const Circle = ({oddStats}) => {
-    let percent = (oddStats.total_wins/oddStats.total_games)*270 + '%'
+    let percent = 270 - (oddStats.total_wins/oddStats.total_games)*270 + '%'
     return (
         <div className="container">
             <div className="outer">

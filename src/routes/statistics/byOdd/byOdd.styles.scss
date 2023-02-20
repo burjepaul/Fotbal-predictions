@@ -20,8 +20,21 @@
         margin-top: 5%;
     }
     
-    input, select{
+    input{
         width: 20%;
+        margin-left: 5%;
+        padding: 5px 10px;
+        text-align: center;
+        box-sizing: border-box;
+        border: 0.2vh solid var(--color-text);
+        border-radius: 2px;
+        background-color: var(--color-title);
+        font-size: var(--step-2);
+        color:var(--color-text);
+    }
+
+    select{
+        width: fit-content;
         margin-left: 5%;
         padding: 5px 10px;
         text-align: center;

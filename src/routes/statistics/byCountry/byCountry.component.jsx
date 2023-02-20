@@ -77,7 +77,7 @@ const ByCountry = () => {
     let output
 
     if (!leagueStats && !missingData) output = <Spinner/>
-    else if (!leagueStats && missingData) output = <h2>No data</h2>
+    else if (!leagueStats && missingData) output = <h2 className="missing-data-title">No data</h2>
     else output = <Circle oddStats={leagueStats}/>
 
     return(
@@ -85,7 +85,7 @@ const ByCountry = () => {
             <h2>Wins by country and league</h2>
             <form>
                 <h3>Select Country:</h3>
-                <select onChange={onOptionChangeCountryHandler}>
+                <select onChange={onOptionChangeCountryHandler} className="country-selector">
                     {countries.map((option, index) => {
                         return <option key={index} >
                                     {option}
@@ -94,7 +94,7 @@ const ByCountry = () => {
                 </select>
                 <br></br>
                 <h3>Select League:</h3>
-                <select onChange={onOptionChangeLeagueHandler}>
+                <select onChange={onOptionChangeLeagueHandler} className="league-selector">
                     {state.leagues.map((option, index) => {
                         return <option key={index} >
                                     {option}

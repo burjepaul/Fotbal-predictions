@@ -4,7 +4,7 @@
 
 .container{
     position: relative;
-    margin: 10% 23%;
+    margin: 10% 30%;
     
     h4{
         color: var(--color-title);
@@ -14,7 +14,7 @@
     height: 16vh;
     width: 16vh;
     border-radius: 50%;
-    background-color: var(--color-win);
+    background-color: var(--color-lost);
     padding: 2vh;
     box-shadow: 6px 6px 6px 10px -1px rgba(0,0,0,0.15),
     -6px -6px 10px -1px rgba(255,255,255,0.7);
@@ -40,11 +40,12 @@
     }   
     circle{
         fill:none;
-        stroke: var(--color-lost);
+        stroke: var(--color-win);
         stroke-width: 2.2vh;
         stroke-dasharray: 270%;
         stroke-dashoffset: 270%;
         animation: anim 2s linear forwards;
+
     }
     svg{
         position: absolute;

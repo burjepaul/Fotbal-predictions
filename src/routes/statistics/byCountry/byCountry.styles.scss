@@ -16,10 +16,23 @@
     }
     
     form{
-        margin-top: 5%;
+        margin: 12% 0;
     }
     
-    input, select{
+    input{
+        width: 50%;
+        margin-left: 5%;
+        padding: 5px 10px;
+        text-align: center;
+        box-sizing: border-box;
+        border: 0.2vh solid var(--color-text);
+        border-radius: 2px;
+        background-color: var(--color-title);
+        font-size: var(--step-2);
+        color:var(--color-text);
+    }
+
+    .country-selector, .league-selector{
         width: fit-content;
         margin-left: 5%;
         padding: 5px 10px;
@@ -40,31 +53,21 @@
     input::-webkit-inner-spin-button {
         -webkit-appearance: none;
         margin: 0;
+    }
 
-    }
-    .statistics-button{
-        display: block;
-        background-color: var(--color-title);
-        border: 1px solid var(--color-text);
-        border-radius: 4px;
-        color:var(--color-text);
-        cursor: pointer;
-        display: block;
-        font-size: var(--step-2);
-        outline: 0;
-        margin-top: 5%;
-        padding: 11px 15px 12px;
-        text-align: center;
-        user-select: none;
-        -webkit-user-select: none;
-        touch-action: manipulation;
-        width: 40%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .statistics-button:hover {
-        box-shadow: rgba(255, 255, 255, 0.5) 0 0 5px;
-        text-decoration: none;
+    .circle{  
+        .missing-data-title{
+        }
     }
 }
+@media screen and (max-width: 950px) {
+        .win-percentage-country{
+            padding: 5%;
+            
+        }
+
+        select{
+            text-align: start;
+            padding-left: 2px;
+        }
+    }
