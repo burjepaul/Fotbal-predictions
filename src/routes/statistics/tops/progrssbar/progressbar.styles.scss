@@ -8,7 +8,7 @@
         position: relative;
         overflow: hidden;
         width: 35vw;
-        height: 3.5vh;
+        height: 4vh;
         border-radius: 5px;
         background-color:var(--color-lost);
     }
@@ -26,5 +26,10 @@
 @media screen and (max-width: 950px) {
     .progress-container{
         margin-right: 20%;
+    
+    .progressbar{
+        width: 50vw;
+        height: 3vh;
+    }
 }
 }
