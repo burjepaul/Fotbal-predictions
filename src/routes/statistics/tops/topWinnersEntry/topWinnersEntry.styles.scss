@@ -1,0 +1,19 @@
+.winner-entry{
+    display: flex;
+    justify-content: space-between;
+
+    h4{
+        display: inline;
+    }
+
+    .games-played{
+        padding-left: 10%;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .winner-entry{
+        display: block;
+        margin: 10%  0%;
+}
+}

@@ -1,0 +1,30 @@
+.progress-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: auto;
+    
+    .progressbar{
+        position: relative;
+        overflow: hidden;
+        width: 25vw;
+        height: 4vh;
+        border-radius: 5px;
+        background-color:var(--color-lost);
+    }
+    
+    .progressPercent{
+        font-size: var(--step-2);
+        color: var(--color-title);
+        position: absolute;
+        left: 50%;
+        top: 20%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .progress-container{
+        margin-right: 10%;
+}
+}

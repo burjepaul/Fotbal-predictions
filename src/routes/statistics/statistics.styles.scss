@@ -5,9 +5,16 @@ h1{
 }
 
 .statistics-container{
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 0% 15%;
+    gap: 15%;
     text-align: center;
+
+    .topsItem{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
 }
 
 @media screen and (max-width: 950px) {
