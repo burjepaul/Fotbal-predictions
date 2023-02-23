@@ -4,7 +4,7 @@ import "./tops.styles.scss"
 import TopWinnersEntry from "./topWinnersEntry/topWinnersEntry.component";
 
 const Tops = () => {
-    const options = ['Country', 'League', 'Team', 'Home Team', 'Away Team'];
+    const options = ['Country', 'League', "Draws", 'Team', 'Home Team', 'Away Team'];
 
     const [querry, setQuerry] = useState(options[0])
     const [topWinners, setTopWinners] = useState()
@@ -16,7 +16,11 @@ const Tops = () => {
     useEffect(() => {
         const optionsToQuerry ={
             'Country': 'get_tops_countries',
-            'League': 'get_tops_leagues'
+            'League': 'get_tops_leagues',
+            'Draws': 'get_tops_draws',
+            'Team': 'get_tops_teams',
+            'Home Team': 'get_tops_home_teams',
+            'Away Team': 'get_tops_away_teams'
         }
         const fetchOddQuery =async () => {
             setTopWinners(undefined)
@@ -30,9 +34,7 @@ const Tops = () => {
 
         fetchOddQuery()
     },[querry])
-
-    console.log(topWinners)
-
+    
     return (
         <div className="tops-container">
             <h2>Top winners</h2>
@@ -48,7 +50,7 @@ const Tops = () => {
             topWinners ? 
                 <div className="top-winners-container">
                     {topWinners.map((winner) => {
-                        return <TopWinnersEntry key={winner.total_games} winner={winner}/>
+                        return <TopWinnersEntry key={winner.percentage ? winner.total_games+winner.league : winner.home_team ? winner.home_team: winner.away_team} winner={winner}/>
                     })}
                 </div>
             :

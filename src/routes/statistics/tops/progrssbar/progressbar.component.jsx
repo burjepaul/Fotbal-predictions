@@ -16,7 +16,7 @@ const ProgressBar = ({percentage}) => {
                     height: "100%",
                     width: `${filled}%`,
                     backgroundColor: "var(--color-win)",
-                    transition: "width 0.5s"
+                    transition: "width 0.1s"
                 }}></div>
                 <h1 className='progressPercent'>{filled - 1}%</h1>
             </div>

@@ -1,19 +1,30 @@
 .winner-entry{
-    display: flex;
-    justify-content: space-between;
-
-    h4{
-        display: inline;
+    .for-percentage{
+        display: flex;
+        justify-content: space-between;
+        
+        h4{
+            display: inline;
+        }
+        
+        .games-played{
+            padding-left: 10%;
+        }
     }
 
-    .games-played{
-        padding-left: 10%;
+    .for-nonpercentage{
+        margin-top: 1%;
+        .winner-team{
+            color:var(--color-win)
+        }
     }
 }
 
 @media screen and (max-width: 950px) {
     .winner-entry{
-        display: block;
-        margin: 10%  0%;
+        .for-percentage{
+            display: block;
+            margin: 10%  0%;
+        }
 }
 }
