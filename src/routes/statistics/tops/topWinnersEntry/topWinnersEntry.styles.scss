@@ -8,12 +8,15 @@
         }
         
         .games-played{
-            padding-left: 10%;
+            padding-left: 1%;
+        }
+        .country{
+            width: 15%;
         }
     }
 
     .for-nonpercentage{
-        margin-top: 1%;
+        margin-top: 3%;
         .winner-team{
             color:var(--color-win)
         }

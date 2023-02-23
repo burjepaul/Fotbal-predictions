@@ -11,14 +11,18 @@ const Navigation = () => {
     const [menu_class, setMenuClass] = useState("menu hidden")
     const [isMenuClicked, setIsMenuClicked] = useState(false)
     
+    const toggle_hide = () => {
+        setBurgerClass("burger-bar unclicked")
+        setMenuClass("menu hidden")
+    }
+
     const updateMenu = () => {
         if(!isMenuClicked){
             setBurgerClass("burger-bar clicked")
             setMenuClass("menu visible")
         }
         else{
-            setBurgerClass("burger-bar unclicked")
-            setMenuClass("menu hidden")
+            toggle_hide()
         }
         setIsMenuClicked(!isMenuClicked)
     }
@@ -41,16 +45,16 @@ const Navigation = () => {
                 </nav>
 
                 <div className={menu_class}>
-                        <Link className="nav-link-mini" to='/aboutus'>
+                        <Link className="nav-link-mini" onClick={()=>{toggle_hide()}} to='/aboutus'>
                             About us
                         </Link>
-                        <Link className="nav-link-mini" to='/forum'>
+                        <Link className="nav-link-mini" onClick={()=>{toggle_hide()}} to='/forum'>
                             Forum
                         </Link>
-                        <Link className="nav-link-mini" to='/contact'>
+                        <Link className="nav-link-mini" onClick={()=>{toggle_hide()}} to='/contact'>
                             Contact
                         </Link>
-                        <Link className="nav-link-mini" to='/signin'>
+                        <Link className="nav-link-mini" onClick={()=>{toggle_hide()}} to='/signin'>
                             Sign In
                         </Link>
                 </div>

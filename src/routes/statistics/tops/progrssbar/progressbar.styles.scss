@@ -3,11 +3,12 @@
     justify-content: flex-end;
     align-items: center;
     margin-left: auto;
+    margin-right: auto;
     
     .progressbar{
         position: relative;
         overflow: hidden;
-        width: 35vw;
+        width: 30vw;
         height: 4vh;
         border-radius: 5px;
         background-color:var(--color-lost);
