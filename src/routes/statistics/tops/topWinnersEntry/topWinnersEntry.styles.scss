@@ -17,7 +17,6 @@
         .winner-team{
             color:var(--color-win)
         }
-        text-align: start;
     }
 }
 
@@ -26,6 +25,13 @@
         .for-percentage{
             display: block;
             margin: 10%  0%;
+        }
+        .for-nonpercentage{
+            margin-top: 1%;
+            .winner-team{
+                color:var(--color-win)
+            }
+            text-align: start;
         }
 }
 }

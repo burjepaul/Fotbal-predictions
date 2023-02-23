@@ -1,0 +1,41 @@
+.image-container{
+    position: relative;
+    
+    .aboutus-image{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        height: auto;
+        border-radius: 5px;
+        box-shadow: 5px 5px 20px 1px rgba(255, 255, 255, 0.5);
+    }
+    
+    .image-text{
+        position: absolute;
+        bottom: 8px;
+        right: 10%;
+        font-size: 18px;
+        color:var(--color-title);
+        width: 40%;
+        padding: 1vh 3vw;
+        margin: 1vh 4vh;
+        border-radius: 5px;
+        font-size: var(--step-2);
+        background-color: rgba(0, 0, 0, 0.568);
+
+        a{
+            cursor: pointer;
+            color: white;
+        }
+    }
+}
+@media screen and (max-width: 950px) {
+.image-container{
+
+    .image-text{
+        width: 60%;
+        font-size: var(--step-1);
+    }
+}
+}
