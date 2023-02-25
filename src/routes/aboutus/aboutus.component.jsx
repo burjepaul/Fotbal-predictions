@@ -2,6 +2,7 @@ import './aboutus.styles.scss'
 import img from '../../assets/aboutusImage.jpg'
 import firstExemple from '../../assets/firstExemple.png'
 import secondExemple from '../../assets/secondExemple.png'
+import thirdExemple from '../../assets/thirdExemple.png'
 
 const Aboutus = () => {
     return (
@@ -32,6 +33,15 @@ const Aboutus = () => {
                     difference is establish. The higher the score difference is, the higher the chances of win are (you can sort every day predictions by this value).
                 </p>
                 <img src={secondExemple} alt="first exemple" className='first-exemple-img'/>
+            </div>
+            <div className='first-exemple'>
+                <h2>3)</h2>
+                <p> This is the third exemple, here the form between teams is almost the same.The calculation it's done the same ,but compared with the previous exemple, where a
+                    higher score difference predicts the winner, here we take the opposite end, with the score difference as low as possible (slightly advantage for away team) and 
+                    predicting a possible draw. To increase the chances of a positive result, another criteriea for teams to meet, is in one of the previous 5 matches, each team 
+                    has to have at least one draw result allready.
+                </p>
+                <img src={thirdExemple} alt="first exemple" className='first-exemple-img'/>
             </div>
         </div>
         </>
