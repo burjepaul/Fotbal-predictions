@@ -14,6 +14,7 @@ const Navigation = () => {
     const toggle_hide = () => {
         setBurgerClass("burger-bar unclicked")
         setMenuClass("menu hidden")
+        setIsMenuClicked(!isMenuClicked)
     }
 
     const updateMenu = () => {

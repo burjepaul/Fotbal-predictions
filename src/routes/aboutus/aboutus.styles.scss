@@ -31,12 +31,34 @@
     }
 
 }
+
 .calculation-description{
+    margin: 3% 0 5% 10%;
+    h2{
+        color: var(--color-title);
+    }
+    p{
+        color: var(--color-title);
+        width: 80%;
+        margin: 1% 5%;
+    }
+    .form-image1{
+        width: 48%;
+        height: auto;
+    }
+    .form-image2{
+        width: 40%;
+        height: auto;
+        margin-left: 5%;
+    }
+}
+
+.examples{
     margin: 5% 0 5% 10%;
     h2{
         color: var(--color-title);
     }
-    .first-exemple{
+    .first-example{
         display: flex;
         padding-bottom: 5%;
         h2{
@@ -48,7 +70,7 @@
             margin: 5%;
         }
 
-        .first-exemple-img{
+        .first-example-img{
             width: 30%;
             height: auto;
             
@@ -70,17 +92,31 @@
     }
 }
 
-.calculation-description{
-    .first-exemple{
+.examples{
+    .first-example{
         display: block;
         p{
             width: 80%;
         }
-        .first-exemple-img{
+        .first-example-img{
             width: 70%;
             height: auto;
             margin-left: 10%;
         }
+    }
+}
+
+.calculation-description{
+    .form-image1{
+        display: block;
+        width: 80%;
+        height: auto;
+        margin-left: 5%;
+    }
+    .form-image2{
+        width: 80%;
+        height: auto;
+        margin-top: 5%;
     }
 }
 }
