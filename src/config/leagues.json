@@ -15,6 +15,9 @@
       "A-League",
       "A-League Women"
   ],
+  "Austria": [
+      "Bundesliga"
+  ],
   "Azerbaijan": [
     "All",
       "First Division",
@@ -76,6 +79,7 @@
   ],
   "Croatia": [
     "All",
+      "Druga NL",
       "HNL",
       "Prva NL"
   ],
@@ -143,6 +147,7 @@
       "Junioren Bundesliga South",
       "Oberliga Bremen",
       "Oberliga Hamburg",
+      "Oberliga Hessen",
       "Oberliga Niederrhein",
       "Oberliga Niedersachsen",
       "Oberliga NOFV-Nord",
@@ -422,6 +427,9 @@
   ],
   "Uganda": [
       "Premier League"
+  ],
+  "Ukraine": [
+      "Youth League"
   ],
   "United arab emirates": [
     "All",
