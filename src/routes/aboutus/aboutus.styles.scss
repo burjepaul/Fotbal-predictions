@@ -38,14 +38,14 @@
     }
     .first-exemple{
         display: flex;
+        padding-bottom: 5%;
         h2{
             display: block;
-            
         }
         p{
             color: var(--color-title);
             width: 50%;
-            padding: 6%;
+            margin: 5%;
         }
 
         .first-exemple-img{
@@ -72,8 +72,14 @@
 
 .calculation-description{
     .first-exemple{
+        display: block;
+        p{
+            width: 80%;
+        }
         .first-exemple-img{
-            width: 43%;
+            width: 70%;
+            height: auto;
+            margin-left: 10%;
         }
     }
 }
