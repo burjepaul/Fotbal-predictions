@@ -1,0 +1,35 @@
+.form-component{
+
+    font-size: var(--step-2);
+    text-align: center;
+
+    .form-group-name{
+        color: var(--color-title);
+        display: block;
+
+        label{
+            display: block;
+            font-size: var(--step-3);
+        }
+
+        input{
+            margin-bottom: 1rem;
+            background-color: var(--color-title);
+            padding: 1rem;
+            width: 50%;
+        }
+        
+        textarea{
+            padding: 1rem;
+            background-color: var(--color-title);
+            width: 50%;
+            height: 15vh;
+        }
+    }
+
+    .submit-contact{
+        font-size: var(--step-3);
+        margin-top: 3%;
+        padding: 1% 3%;
+    }
+}
