@@ -49,8 +49,8 @@ const Navigation = () => {
                         <Link className="nav-link-mini" onClick={()=>{toggle_hide()}} to='/aboutus'>
                             About us
                         </Link>
-                        <Link className="nav-link-mini" onClick={()=>{toggle_hide()}} to='/forum'>
-                            Forum
+                        <Link className="nav-link-mini" onClick={()=>{toggle_hide()}} to='/coming-soon'>
+                            Coming Soon
                         </Link>
                         <Link className="nav-link-mini" onClick={()=>{toggle_hide()}} to='/contact'>
                             Contact
@@ -75,8 +75,8 @@ const Navigation = () => {
                     <Link className="nav-link" to='/aboutus'>
                         About us
                     </Link>
-                    <Link className="nav-link" to='/forum'>
-                        Forum
+                    <Link className="nav-link" to='/coming-soon'>
+                        Coming Soon
                     </Link>
                     <Link className="nav-link" to='/contact'>
                         Contact

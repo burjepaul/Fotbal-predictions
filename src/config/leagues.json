@@ -10,13 +10,25 @@
   "Angola": [
       "Girabola"
   ],
+  "Argentina": [
+    "All",
+      "Liga Profesional",
+      "Primera B - Apertura"
+  ],
+  "Armenia": [
+      "Premier League"
+  ],
   "Australia": [
     "All",
       "A-League",
       "A-League Women"
   ],
   "Austria": [
-      "Bundesliga"
+    "All",
+      "2. Liga",
+      "Bundesliga",
+      "Regionalliga Central",
+      "Regionalliga East"
   ],
   "Azerbaijan": [
     "All",
@@ -44,6 +56,14 @@
   "Bermuda": [
       "Premier League"
   ],
+  "Bolivia": [
+      "Division Profesional"
+  ],
+  "Bosnia and herzegovina": [
+    "All",
+      "Premier League",
+      "Prva Liga - FBiH"
+  ],
   "Botswana": [
       "Premier League"
   ],
@@ -51,6 +71,7 @@
     "All",
       "Campeonato Baiano",
       "Campeonato Capixaba",
+      "Campeonato Catarinense",
       "Campeonato Gaucho",
       "Campeonato Goiano",
       "Campeonato Matogrossense",
@@ -65,8 +86,10 @@
     "All",
       "Parva liga",
       "Third League - North-East",
+      "Third League - North-West",
       "Third League - South-East",
-      "Third League - South-West"
+      "Third League - South-West",
+      "Vtora liga"
   ],
   "Burkina faso": [
       "Premier League"
@@ -75,7 +98,15 @@
       "Primus League"
   ],
   "Cameroon": [
-      "Elite One"
+    "All",
+      "Elite One",
+      "Elite Two"
+  ],
+  "Chile": [
+      "Primera Division"
+  ],
+  "Colombia": [
+      "Primera A - Apertura"
   ],
   "Croatia": [
     "All",
@@ -87,10 +118,21 @@
       "First Division"
   ],
   "Czech republic": [
-      "1. Liga"
+    "All",
+      "1. Liga",
+      "CFL - Group A",
+      "CFL - Group B",
+      "Division 2",
+      "Division A",
+      "Division B",
+      "Division C",
+      "Plzensky KP",
+      "U19 League"
   ],
   "Denmark": [
-      "1st Division"
+    "All",
+      "1st Division",
+      "Superliga"
   ],
   "Egypt": [
     "All",
@@ -98,6 +140,9 @@
       "Division 2 - Group B",
       "Division 2 - Group C",
       "Premier League"
+  ],
+  "El salvador": [
+      "Primera Division - Clausura"
   ],
   "England": [
     "All",
@@ -145,16 +190,21 @@
       "Bundesliga Women",
       "Junioren Bundesliga North",
       "Junioren Bundesliga South",
+      "Junioren Bundesliga West",
+      "Oberliga Bayern Nord",
       "Oberliga Bremen",
       "Oberliga Hamburg",
       "Oberliga Hessen",
+      "Oberliga Mittelrhein",
       "Oberliga Niederrhein",
       "Oberliga Niedersachsen",
       "Oberliga NOFV-Nord",
       "Oberliga Schleswig-Holstein",
       "Oberliga Westfalen",
+      "Regionalliga Bayern",
       "Regionalliga Nordost",
       "Regionalliga North",
+      "Regionalliga Sudwest",
       "Regionalliga West"
   ],
   "Ghana": [
@@ -169,6 +219,15 @@
       "Gamma Ethniki - Group 5",
       "Super League",
       "Super League 2"
+  ],
+  "Guatemala": [
+      "Liga Nacional - Clausura"
+  ],
+  "Guinea": [
+      "Ligue 1"
+  ],
+  "Honduras": [
+      "Liga Nacional - Clausura"
   ],
   "Hong kong": [
       "Premier League"
@@ -231,6 +290,9 @@
   "Jamaica": [
       "Premier League"
   ],
+  "Japan": [
+      "WE League Women"
+  ],
   "Kenya": [
     "All",
       "Premier League",
@@ -238,6 +300,9 @@
   ],
   "Kosovo": [
       "Superliga"
+  ],
+  "Kuwait": [
+      "Premier League"
   ],
   "Liberia": [
       "LFA First Division"
@@ -252,6 +317,8 @@
       "Premiere Division"
   ],
   "Malta": [
+    "All",
+      "Challenge League - Relegation Group",
       "Premier League"
   ],
   "Mauritania": [
@@ -259,6 +326,14 @@
   ],
   "Mauritius": [
       "Super League"
+  ],
+  "Mexico": [
+    "All",
+      "Liga de Expansion MX - Clausura",
+      "Liga MX - Clausura",
+      "Liga MX U20 - Clausura",
+      "Liga MX Women - Clausura",
+      "Liga Premier Serie A - Clausura"
   ],
   "Montenegro": [
       "Prva Crnogorska Liga"
@@ -278,6 +353,9 @@
       "Eredivisie",
       "Eredivisie Women",
       "Tweede Divisie"
+  ],
+  "Nicaragua": [
+      "Liga Primera U20 - Clausura"
   ],
   "Niger": [
       "Ligue 1"
@@ -302,7 +380,13 @@
   "Poland": [
     "All",
       "Division 1",
-      "Ekstraklasa"
+      "Division 2",
+      "Ekstraklasa",
+      "Ekstraliga Women",
+      "III Liga - Group I",
+      "III Liga - Group II",
+      "III Liga - Group III",
+      "III Liga - Group IV"
   ],
   "Portugal": [
     "All",
@@ -318,7 +402,12 @@
       "QSL"
   ],
   "Romania": [
-      "Liga 1"
+    "All",
+      "Liga 1",
+      "Liga 2"
+  ],
+  "Russia": [
+      "Premier League"
   ],
   "Rwanda": [
       "Premier League"
@@ -335,6 +424,7 @@
     "All",
       "Championship",
       "Highland League",
+      "League One",
       "League Two",
       "Lowland League",
       "Premiership",
@@ -344,6 +434,12 @@
       "Ligue 1"
   ],
   "Serbia": [
+    "All",
+      "Prva Liga",
+      "Srpska Liga - Belgrade",
+      "Srpska Liga - East",
+      "Srpska Liga - Vojvodina",
+      "Srpska Liga - West",
       "Super Liga"
   ],
   "Sierra leone": [
@@ -352,9 +448,14 @@
   "Slovakia": [
     "All",
       "1. Liga Women",
+      "2. liga",
+      "3. Liga - East",
+      "3. Liga - West",
       "Fortuna liga"
   ],
   "Slovenia": [
+    "All",
+      "2. SNL",
       "Prva liga"
   ],
   "South africa": [
@@ -398,6 +499,7 @@
   "Switzerland": [
     "All",
       "Challenge League",
+      "Promotion League",
       "Super League Women"
   ],
   "Syria": [
@@ -429,6 +531,8 @@
       "Premier League"
   ],
   "Ukraine": [
+    "All",
+      "Premier League",
       "Youth League"
   ],
   "United arab emirates": [

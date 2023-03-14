@@ -2,7 +2,10 @@ import './signin.styles.scss'
 
 const SignIn = () => {
     return(
-        <h1>Sign in</h1>
+        <>
+            <h1>Sign in</h1>
+            <h2>For now there is no need of an account!</h2>
+        </>
     )
 }
 
