@@ -19,7 +19,8 @@ const Aboutus = () => {
                 <div className='image-container'>
                     <div className='image-text'>
                         <p>&nbsp; Using an automate software, we are trying to predict the fotbal matches results. The automation is done by scanning all the fotbal matches that are going to be 
-                            played tomorrow, and base on the teams form it is going to predict the winner (see below). Each day there will be at least 10 games that are most likely to be correct,
+                            played tomorrow, and base on the teams form it is going to predict the winner (see below).<br/> 
+                            &nbsp;Each day there will be at least 10 games that are most likely to be correct,
                             depending of overall loading. The scanning is done only on competition where there is a standing. For cups, frendly matches and other such events being ignored.
                         </p>
                     </div>  
@@ -50,7 +51,7 @@ const Aboutus = () => {
                 </p>
                 <img src={firstExample} alt="first example" className='first-example-img'/>
             </div>
-            <div className='horizontal-rule'></div>
+            <div className='horizontal-rule-about-us'></div>
             <div className='first-example'>
                 <p>&nbsp;&nbsp;&nbsp; In this second example the form difference between Sheffield and Charlton is not so obvious, but in this case it's taken into account the teams aganst they have
                     played. Sheffield's poorest result (1 draw) being against the 3rd team of the standing, while Charlton best to results (2 wins) are agains the last team and one
@@ -60,7 +61,7 @@ const Aboutus = () => {
                 </p>
                 <img src={secondExample} alt="first example" className='first-example-img'/>
             </div>
-            <div className='horizontal-rule'></div>
+            <div className='horizontal-rule-about-us'></div>
             <div className='first-example'>
                 <p>&nbsp;&nbsp;&nbsp; This is the third example, here the form between teams is almost equal. The calculation it's done the same ,but compared with the previous example, where a
                     higher score difference predicts the winner, here we take the opposite end, with the score difference as low as possible (slightly advantage for away team) and 

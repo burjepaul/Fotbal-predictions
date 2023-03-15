@@ -56,9 +56,6 @@
     .first-example{
         display: flex;
         padding-bottom: 5%;
-        h2{
-            
-        }
         p{
             color: var(--color-title);
             width: 50%;
@@ -74,7 +71,7 @@
     }
 }
 
-.horizontal-rule{
+.horizontal-rule-about-us{
     width: 90%;
     height: 1px;
     margin-bottom: 1%;
@@ -83,13 +80,14 @@
 
 
 @media screen and (max-width: 950px) {
-.image-container{
-
-    .image-text{
-        width: 70%;
-        font-size: var(--step-1);
-        margin: 0vh 1vh;
-        padding: 0.3vh 3vw;
+.aboutus-hero{
+    .image-container{
+        .image-text{
+            width: 80%;
+            font-size: var(--step-1);
+            margin: 0vh 6vh;
+            padding: 0.3vh 3vw;
+        }
     }
 }
 
