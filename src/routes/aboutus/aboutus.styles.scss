@@ -1,41 +1,35 @@
-.image-container{
-    position: relative;
-    
-    .aboutus-image{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 80%;
-        height: auto;
-        border-radius: 5px;
-        box-shadow: 5px 5px 20px 1px rgba(255, 255, 255, 0.5);
-    }
-    
-    .image-text{
-        position: absolute;
-        bottom: 8px;
-        right: 10%;
-        font-size: 18px;
-        color:var(--color-title);
-        width: 40%;
-        padding: 1vh 3vw;
-        margin: 1vh 4vh;
-        border-radius: 5px;
-        font-size: var(--step-2);
-        background-color: rgba(0, 0, 0, 0.568);
-
-        a{
-            cursor: pointer;
-            color: white;
+.aboutus-hero{
+    background-size: cover;
+    background-position: center;
+    text-shadow: 12px 12px 12px #000000;
+    .title-container{
+        h1{
+            padding: 6% 0 0;
+        }
+        
+        h2{
+            margin-top: -1%;
+            padding: 3% 0 5% 0;
         }
     }
-
+    
+    .image-container{
+        .image-text{
+            width: 50%;
+            font-size: 18px;
+            color:var(--color-title);
+            font-size: var(--step-2);
+            margin-left: 45%;
+            padding-bottom: 5%;
+        }
+}
 }
 
 .calculation-description{
-    margin: 3% 0 5% 10%;
+    margin: -3% 0 5% 10%;
     h2{
         color: var(--color-title);
+        text-align: start;
     }
     p{
         color: var(--color-title);
@@ -57,12 +51,13 @@
     margin: 5% 0 5% 10%;
     h2{
         color: var(--color-title);
+        text-align: start;
     }
     .first-example{
         display: flex;
         padding-bottom: 5%;
         h2{
-            display: block;
+            
         }
         p{
             color: var(--color-title);
@@ -79,6 +74,12 @@
     }
 }
 
+.horizontal-rule{
+    width: 90%;
+    height: 1px;
+    margin-bottom: 1%;
+    background-color:var(--color-title);
+}
 
 
 @media screen and (max-width: 950px) {
