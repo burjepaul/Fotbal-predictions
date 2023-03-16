@@ -7,14 +7,14 @@
   --color-lost: rgb(136, 16, 16);
   --color-postponed: rgb(18, 18, 97);
   
-  --step--2: clamp(0.48rem, calc(0.46rem + 0.08vw), 0.56rem);
-  --step--1: clamp(0.57rem, calc(0.55rem + 0.13vw), 0.70rem);
-  --step-0: clamp(0.69rem, calc(0.65rem + 0.19vw), 0.88rem);
-  --step-1: clamp(0.83rem, calc(0.77rem + 0.27vw), 1.09rem);
-  --step-2: clamp(0.99rem, calc(0.91rem + 0.38vw), 1.37rem);
-  --step-3: clamp(1.19rem, calc(1.08rem + 0.52vw), 1.71rem);
-  --step-4: clamp(1.43rem, calc(1.28rem + 0.71vw), 2.14rem);
-  --step-5: clamp(1.71rem, calc(1.52rem + 0.96vw), 2.67rem);
+  --step--2: clamp(0.35rem, calc(0.31rem + 0.21vw), 0.56rem);
+  --step--1: clamp(0.42rem, calc(0.36rem + 0.28vw), 0.70rem);
+  --step-0: clamp(0.50rem, calc(0.43rem + 0.38vw), 0.88rem);
+  --step-1: clamp(0.60rem, calc(0.50rem + 0.49vw), 1.09rem);
+  --step-2: clamp(0.72rem, calc(0.59rem + 0.65vw), 1.37rem);
+  --step-3: clamp(0.86rem, calc(0.69rem + 0.85vw), 1.71rem);
+  --step-4: clamp(1.04rem, calc(0.82rem + 1.10vw), 2.14rem);
+  --step-5: clamp(1.24rem, calc(0.96rem + 1.43vw), 2.67rem);
 }
 
 body {
