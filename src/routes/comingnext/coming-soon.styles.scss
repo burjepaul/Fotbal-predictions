@@ -23,18 +23,17 @@
 .improvement-container{
     display: flex;
     justify-content: space-between;
-    
     margin: 5% auto;
     padding: 0% 5%;
     max-width: 1200px;
     .improvement-text{
-        width: 50%;
+        width: 55%;
         color:var(--color-title);
         h2{
             text-align: start;
         }
     }
-
+    
     .mobile-view-text{
         display: none;
     }

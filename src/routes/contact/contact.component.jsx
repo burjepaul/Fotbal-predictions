@@ -1,9 +1,10 @@
 import { useReducer, useState } from 'react'
-import emailjs from "emailjs-com"
+// import emailjs from "emailjs-com"
 import './contact.styles.scss'
 
 const Contact = () => {
     const [validData, setValidData] = useState(true)
+    const [messageSent, setMessageSent] = useState(false)
 
     const initalValues ={
         name: "",
@@ -148,15 +149,36 @@ const Contact = () => {
         setValidData(true) 
     }
 
-    const sendEmail = (e) => {
-        e.preventDefault();
-        emailjs.sendForm('service_emvnbab', 'template_nljbpov', e.target, 'dWdldUeQp-bwHTTqj')
-        .then((result) => {
-            window.location.reload()  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior) 
-        }, (error) => {
-            console.log(error.text);
+    // const sendEmail = (e) => {
+    //     e.preventDefault();
+    //     emailjs.sendForm('service_emvnbab', 'template_nljbpov', e.target, 'dWdldUeQp-bwHTTqj')
+    //     .then((result) => {
+    //         window.location.reload()  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior) 
+    //     }, (error) => {
+    //         console.log(error.text);
             
-        });
+    //     });
+    // }
+
+
+    const clearFields = () => {
+        dispatch({
+            type: ACTION_TYPES.CHANGE_MESSAGE,
+            newMessageValue: ''
+        })
+        dispatch({
+            type: ACTION_TYPES.CHANGE_PHONE,
+            newPhoneValue: ''
+        })
+        dispatch({
+            type: ACTION_TYPES.CHANGE_EMAIL,
+            newEmailValue: ''
+        })
+        dispatch({
+            type: ACTION_TYPES.CHANGE_NAME,
+            newNameValue: ''
+        })
+        setMessageSent(true)
     }
 
     return(
@@ -165,9 +187,11 @@ const Contact = () => {
             <form className='form-component' onSubmit={(e) => {
                 e.preventDefault()
                 validateData()
-                if(!validData){
-                    sendEmail(e)
-                }
+                if(validData){
+                    // sendEmail(e)
+                    clearFields()
+                    console.log(1)
+                }   
             }}>
                 <div className="form-group-name">
                     <label>NAME:</label>
@@ -179,10 +203,19 @@ const Contact = () => {
                     <label>MESSAGE:</label>
                     <textarea placeholder='Your message (min 50 characters) *' name="message" value={state.message} style={{color:state.messagecolor}} onChange={handleMessageChange}/>
                 </div>
-                {(validData) ? '':
-                <p style={{color:"red"}}>Something is wrong, check again!</p>
+                {
+                (validData) ?
+                    '' 
+                    :
+                    <p style={{color:"red"}}>Something is wrong, check again!</p>
                 }
-                    
+
+                {
+                (messageSent) ? 
+                    <p style={{color:"red"}}>Message sent!</p> 
+                    :
+                    ''
+                }
                 <button className='submit-contact'>Send</button>
             </form>
         </>
