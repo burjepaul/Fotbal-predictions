@@ -1,16 +1,14 @@
 .navigation {
-    height: 70px;
-    width: 100%;
+    max-width: 1200px;
+    margin: 0% auto;
+    padding: 0% 5%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 25px;
   
     .logo-container {
       height: 100%;
-      width: 70px;
       padding: 25px;
       position: relative;
-
     }
   
     .nav-links-container {
@@ -21,18 +19,17 @@
       justify-content: flex-end;
   
       .nav-link {
-        margin-top: 2vh;
-        margin-right: 1vh;
+        margin: 5% 1%;
         padding: 10px 25px;
         cursor: pointer;
         font-size: var(--step-3);
         white-space: nowrap;
         border-radius: 10px;
-        transition: 1s;
+        transition: 0.75s;
       }
 
       .nav-link:hover{
-        background-color: rgb(68, 66, 66);
+        background-color: rgb(41, 41, 41);
         color: var(--color-title);
         transform: scale(1.1)
       }

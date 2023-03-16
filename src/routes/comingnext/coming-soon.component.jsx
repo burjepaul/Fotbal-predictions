@@ -7,7 +7,7 @@ import comingSoonImage3 from '../../assets/comingsoon-example3.jpg'
 
 const ComingSoon = () => {
     return(
-        <>
+        <div className='coming-soon-page'>
             <div className='improvement-hero' style={{
                  backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(' + require(`../../assets/improvements-hero-image.jpg`) + ')'
             }}>
@@ -62,7 +62,7 @@ const ComingSoon = () => {
                     <img src={comingSoonImage3} alt="comingSoonImage3" className='improvement-image'/>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

@@ -2,12 +2,14 @@
     background-size: cover;
     background-position: center;
     text-shadow: 12px 12px 12px #000000;
+    margin-top: -2%;
     h1{
-        padding: 6% 0 0 0;
+        padding: 8% 0 0 0;
     }
 
     h2{
-        padding: 0 0 7% 0;
+        margin-top: 6%;
+        padding: 0 0 8% 0;
     }
 
     .hero-image{
@@ -21,8 +23,10 @@
 .improvement-container{
     display: flex;
     justify-content: space-between;
-    margin: 5% 10%;
-
+    
+    margin: 5% auto;
+    padding: 0% 5%;
+    max-width: 1200px;
     .improvement-text{
         width: 50%;
         color:var(--color-title);

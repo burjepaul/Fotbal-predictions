@@ -13,8 +13,7 @@ const Aboutus = () => {
                  backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(' + require(`../../assets/aboutusImage.jpg`) + ')'
             }}>
                 <div className='title-container'>
-                    <h1>About Us</h1>
-                    <h2>What we do, how we do</h2>
+                    <h1>What we do, how we do</h1>
                 </div>
                 <div className='image-container'>
                     <div className='image-text'>
@@ -39,14 +38,16 @@ const Aboutus = () => {
                 &nbsp;&nbsp;&nbsp; Statistical, it is confirmed that home teams have a 15% higher rate of winning, so for a prediction of "2", maning that the away team is going to win,from the score difference
                 is subtracted 15%.
                 </p>    
-            <img src={formImage1} alt="first example" className='form-image1'/>
-            <img src={formImage2} alt="first example" className='form-image2'/>
+            <div className='calculation-images'>
+                <img src={formImage1} alt="first example" className='form-image1'/>
+                <img src={formImage2} alt="first example" className='form-image2'/>
+            </div>
         </div>
 
         <div className='examples'>
             <h2>Examples:</h2>
             <div className='first-example'>
-                <p>&nbsp;&nbsp;&nbsp; For this first example we have Hoffenheim playng agains Dortmund. Below we can se that Dortmund comes after 5 wins in a row, so it is in a good form, on the other hand,
+                <p>&nbsp;&nbsp;&nbsp; For this first example we have Hoffenheim playng agains Dortmund. Next we can se that Dortmund comes after 5 wins in a row, so it is in a good form, on the other hand,
                     we have Hoffenheim with no win, just one equal and 4 loses. In this case the output will come as a victory for Dotmund.
                 </p>
                 <img src={firstExample} alt="first example" className='first-example-img'/>
