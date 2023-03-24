@@ -118,8 +118,11 @@
         }
 
         .first-example-img{
+            margin-top: auto;
+            margin-bottom: auto;
             width: 40%;
-            height: auto;
+            border-radius: 10px;
+            opacity: 0.7
         }
         
     }
