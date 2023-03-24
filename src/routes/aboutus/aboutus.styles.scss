@@ -27,6 +27,13 @@
 }
 }
 
+.card-container{
+    display: flex;
+    max-width: 1200px;
+    margin: 1% auto;
+    padding: 0% 5%;
+}
+
 .calculation-description{
     max-width: 1200px;
     margin: 1% auto;
@@ -84,6 +91,39 @@
     background-color:var(--color-title);
 }
 
+.recommendations{
+    h2{
+        color: var(--color-title);
+        max-width: 1200px;
+        padding: 0 5%;
+        margin: 3% auto;
+        text-align: start;
+    }
+    h3{
+        color: var(--color-title);
+        max-width: 1200px;
+        padding: 0 5%;
+        margin: 3% auto;
+        text-align: start;
+    }
+    .first-recommendation{
+        max-width: 1200px;
+        margin: 1% auto;
+        padding: 0 5%;
+        display: flex;
+        p{
+            color: var(--color-title);
+            width: 50%;
+            margin: 3% auto;
+        }
+
+        .first-example-img{
+            width: 40%;
+            height: auto;
+        }
+        
+    }
+}
 
 @media screen and (max-width: 950px) {
 .aboutus-hero{
