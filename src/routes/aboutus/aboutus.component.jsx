@@ -10,23 +10,26 @@ import RecommendationsImage from '../../assets/about-us/recommended.png'
 import LowRiskImage from '../../assets/about-us/low-risk.png'
 import FindSupportImage from '../../assets/about-us/find-support.png'
 import Card from '../../components/card/card.component'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 
 const Aboutus = () => {
-    const [aboutUsRender, setAboutUsRender] = useState(null)
+    const [aboutUsRender, setAboutUsRender] = useState("")
 
-    const cardTitles = ["Way of calculating", "Exemples", "Recommendations"]
+    const scrollToRef = useRef(null)
+
+    const cardTitles = ["Way of calculating", "Exemples", "Recommendations", ""]
     const cardText = ["See how it's done", "See some exemples", "A couple of recommendations"]
 
     const onCardClick = (index) => {
         setAboutUsRender(cardTitles[index])
+        scrollToRef.current?.scrollIntoView({behavior:'smooth'})
     }
 
     const renderCard = () => {
         switch(aboutUsRender){
             case cardTitles[0]:
                 return(
-                    <div className='calculation-description'>
+                    <div className='calculation-description' ref={scrollToRef}>
                         <h2>Way of calculating:</h2>
                         <p>&nbsp;&nbsp;&nbsp; The automation is done by extracting all the games and their respective leagues, for each team of the league a form score is calculated based on the result of last five 
                             matches played and the position in the standing of those teams (see firts image). After this a difference is calculated between the 2 facing teams meaning a difference
@@ -42,11 +45,14 @@ const Aboutus = () => {
                             <img src={formImage1} alt="first example" className='form-image1'/>
                             <img src={formImage2} alt="first example" className='form-image2'/>
                         </div>
+                        <p>&nbsp;&nbsp;&nbsp;Note that the above explenation and images are just a short description, additionally, there are taken in account the teams home form vs. away form, how long ago those matches 
+                            had been played and goal difference.
+                        </p>
                     </div> 
                 )
             case cardTitles[1]:
                 return(
-                    <div className='examples'>
+                    <div className='examples' ref={scrollToRef}>
                         <h2>Exemples:</h2>
                         <div className='first-example'>
                             <p>&nbsp;&nbsp;&nbsp; For this first example we have Hoffenheim playng agains Dortmund. Next we can se that Dortmund comes after 5 wins in a row, so it is in a good form, on the other hand,
@@ -77,7 +83,7 @@ const Aboutus = () => {
                 )
             case cardTitles[2]:
                 return(
-                    <div className='recommendations'>
+                    <div className='recommendations' ref={scrollToRef}>
                         <h2>Recommendetions:</h2>
                         <h3>1. Safe Gambling</h3>
                         <div className='first-recommendation'>
@@ -102,6 +108,11 @@ const Aboutus = () => {
                         <br></br>
                     </div>
                 )
+            case cardTitles[3]:
+                return (
+                    <div ref={scrollToRef} style={{height:400}}>
+                    </div>
+                )
             default: 
                 return null
 
@@ -121,14 +132,14 @@ const Aboutus = () => {
                             <p>&nbsp; Using an automate software, we are trying to predict the fotbal matches results. The automation is done by scanning all the fotbal matches that are going to be 
                                 played tomorrow, and base on the teams form it is going to predict the winner (see below).<br/> 
                                 &nbsp;Each day there will be at least 10 games that are most likely to be correct,
-                                depending of overall loading. The scanning is done only on competition where there is a standing. For cups, frendly matches and other such events being ignored.
+                                depending of overall loading. The scanning is done only on competition where there is a standing. Cups, frendly matches and other such events being ignored.
                             </p>
                         </div>  
                     </div>
             </div>
 
             <div className='card-container'>
-                <Card title={cardTitles[0]} imageSource={wayOfCalculatingImage} text={cardText[0]} handleCardRender={(e) => {onCardClick(0)}}/>
+                <Card title={cardTitles[0]} imageSource={wayOfCalculatingImage} text={cardText[0]} handleCardRender={() => {onCardClick(0)}}/>
                 <Card title={cardTitles[1]} imageSource={ExemplesImage} text={cardText[1]} handleCardRender={() => {onCardClick(1)}}/>
                 <Card title={cardTitles[2]} imageSource={RecommendationsImage} text={cardText[2]} handleCardRender={() => {onCardClick(2)}}/>
             </div>
