@@ -50,11 +50,16 @@ body{
 
 .match .predictionodd{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+
+.odd{
 }
 
 .prediction{
-  width: 10vw;
+  white-space:nowrap;
+  width: fit-content;
+  padding-right: 100%;
 }
 
 .result{
