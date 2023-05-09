@@ -22,7 +22,7 @@ const Match = (props) => {
           <div 
             className='flag-image'
             style= {{
-              backgroundImage: 'url(' + require(`../../assets/flags/Albania.png`) + ')'                
+              backgroundImage: 'url(' + require(`../../assets/flags/${country}.png`) + ')'                
             }}   
           />
           <h3>{country} - {league}</h3>
