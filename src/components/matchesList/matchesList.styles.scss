@@ -1,16 +1,20 @@
 .matches-list {
     margin: 0;
      
-    .mathclist-header {
-      padding: 1%;
-      display:flex;
-      justify-content: space-between;
-      right: 0;
-      color:var(--color-title);
-
+      .predictions-to-render{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+      
       h2{ 
         color: var(--color-title);
         padding-bottom: 2%;
-
-        }
-    }}
+    }
+    
+    .pagination-sort{
+      display: flex;
+      justify-content: space-between;
+      margin-right: 5%;
+    }
+}
