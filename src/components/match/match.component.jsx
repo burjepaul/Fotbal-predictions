@@ -21,12 +21,12 @@ const Match = (props) => {
     return (
       <>
         <div className='match-header'>
-          <div 
+          {/* <div 
             className='flag-image'
             style= {{
               backgroundImage: 'url(' + require(`../../assets/flags/${country}.png`) + ')'                
             }}    
-          />
+          /> */}
           <h3>{country} - {league}</h3>
         </div>
         
