@@ -22,7 +22,7 @@ const Match = (props) => {
           <div 
             className='flag-image'
             style= {{
-              backgroundImage: 'url(' + require(`../../assets/flags/${country}.png`) + ')'                
+              backgroundImage: 'url(' + require(`../../assets/flag/${country}.png`) + ')'                
             }}   
           />
           <h3>{country} - {league}</h3>
@@ -41,7 +41,7 @@ const Match = (props) => {
             </div>
             
             <div className='matchDetails'>
-              <h4>{home_team}  {away_team}</h4>
+              <h4>{home_team} - {away_team}</h4>
                 <div className='prediction'>
                   {formatPrediction}
                 </div>

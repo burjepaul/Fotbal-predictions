@@ -1,7 +1,6 @@
 import { useState, useEffect, useCallback, Fragment } from 'react'
 import MatchesList from '../../components/matchesList/matchesList.component'
 import Spinner from '../../components/spinner/spinner'
-
 import './yesterdayResults.styles.scss'
 
 let date = new Date()
