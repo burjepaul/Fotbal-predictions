@@ -12,7 +12,7 @@ const CategoryItem = ({category, handlePredictionCategory}) => {
                             backgroundImage: 'url(' + require(`../../assets/${imageUrl}.png`) + ')'
                         }}    
                         />
-                        <div className='category-body-container'>
+                    <div className='category-body-container'>
                         <p className='category-title'>{title}</p>
                     </div>
             </Link>

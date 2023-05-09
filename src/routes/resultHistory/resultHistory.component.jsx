@@ -1,8 +1,8 @@
-import './resultHistory.styles.scss'
 import Calendar from 'react-calendar'
 import { useState, useEffect } from 'react'
 import MatchesList from '../../components/matchesList/matchesList.component';
 import Spinner from '../../components/spinner/spinner';
+import './resultHistory.styles.scss'
 
 const ResultHistory = () => {
     let date = new Date()
@@ -16,7 +16,6 @@ const ResultHistory = () => {
     const [dayMatches, setDayMatches] = useState([])
     const [isLoadingData, setIsLoadingData] = useState(false)
     const [error, setError] = useState(null)
-
 
     const fetchTodayMatchesHandler =async () => {
         setIsLoadingData(true)
@@ -44,7 +43,6 @@ const ResultHistory = () => {
 
     let content;
 
-    
     if (!isLoadingData){
         content = <MatchesList matches={dayMatches} />
     }
@@ -65,8 +63,8 @@ const ResultHistory = () => {
                 <h1>Results History</h1>
                 <h3>Choose a date from which you want to see the results</h3>
                 <Calendar onChange={onChange} value={value} maxDate={date} minDetail="year" className="calendar"/>
-                {content}
             </div>
+            {content}
         </>
     )
 }
