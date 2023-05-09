@@ -43,7 +43,7 @@ const Match = (props) => {
             </div>
             
             <div className='matchDetails'>
-              <h4>{home_team} - {away_team}</h4>
+              <h4>{home_team}  {away_team}</h4>
                 <div className='prediction'>
                   {formatPrediction}
                 </div>
