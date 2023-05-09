@@ -1,4 +1,3 @@
-/* eslint-disable eqeqeq */
 import { Fragment } from 'react';
 import './match.styles.scss'
 
@@ -17,21 +16,20 @@ const Match = (props) => {
   else{
     formatPrediction = <h4>{prediction} goals</h4>
   }
-
     return (
       <>
         <div className='match-header'>
           <div 
             className='flag-image'
             style= {{
-              backgroundImage: 'url(' + require(`../../assets/flags/${country}.png`) + ')'                
-            }}    
+              // backgroundImage: 'url(' + require(`../../assets/flags/${country}.png`) + ')'                
+            }}   
           />
           <h3>{country} - {league}</h3>
         </div>
         
         <div className='match' 
-            style={ result == undefined ? {backgroundColor: "var(--color-components)"} : 
+            style={ result === undefined ? {backgroundColor: "var(--color-components)"} : 
             result === 'WIN' ? {backgroundColor: "var(--color-win)"} : 
             result === 'LOST'? {backgroundColor: "var(--color-lost)"}:
             {backgroundColor: "var(--color-postponed)"}
@@ -51,7 +49,7 @@ const Match = (props) => {
       
             <div className='predictionodd'>
               <div className='odd'>
-                {odd == undefined || odd == 0 ? 
+                {odd === undefined || odd === 0 ? 
                 null :
                 <Fragment>
                     <h4>{odd === 0 ? '-':odd}</h4>
@@ -59,7 +57,7 @@ const Match = (props) => {
               }
               </div>
               <div className='result'>
-                {result == undefined ? 
+                {result === undefined ? 
                 null :
                   <Fragment>
                     <h4>{result}</h4>
