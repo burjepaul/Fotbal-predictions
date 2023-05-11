@@ -1,0 +1,20 @@
+.privacy-container{
+    text-align: center;
+    font-size: var(--step-2);
+    color: var(--color-title);
+    max-width: 1200px;
+    padding: 0 5%;
+    margin: 3% auto;
+
+    .subTitle{
+        font-size: var(--step-3);
+        color: var(--color-title);
+        text-align: start;
+        margin-top: 7%;
+    }
+
+    p{
+        text-align: start;
+        margin-top: -1%;
+    }
+}

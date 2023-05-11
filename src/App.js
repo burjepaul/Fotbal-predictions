@@ -10,6 +10,7 @@ import Aboutus from "./routes/aboutus/aboutus.component";
 import Contact from "./routes/contact/contact.component";
 import SignIn from "./routes/signin/signin.component";
 import ComingSoon from "./routes/comingnext/coming-soon.component";
+import Privacy from "./routes/privacyPolicy/privacy.component";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path='/coming-soon' element={<ComingSoon/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/signin' element={<SignIn/>}/>
+        <Route path='/privacy-policy' element={<Privacy/>}/>
       </Route>
     </Routes>
   );

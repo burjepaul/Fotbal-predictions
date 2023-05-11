@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import Directory from '../../components/directory/directory.component';
 
 function Home() {
@@ -38,6 +38,9 @@ function Home() {
     <div>
         <Outlet/>
         <Directory categories={categories}/>
+        <Link to={'/privacy-policy'}>
+        <h1>Privacy</h1>
+        </Link>
     </div>
   );
 }
