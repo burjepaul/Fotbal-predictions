@@ -18,7 +18,9 @@ const Match = (props) => {
   }
     return (
       <>
-        <div className='match-header'>
+        <div className='match-header'
+         
+        >
           <div 
             className='flag-image'
             style= {{
