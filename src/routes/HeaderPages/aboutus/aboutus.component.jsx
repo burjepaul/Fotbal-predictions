@@ -1,15 +1,15 @@
 import './aboutus.styles.scss'
-import firstExample from '../../assets/about-us/firstExample.png'
-import secondExample from '../../assets/about-us/secondExample.png'
-import thirdExample from '../../assets/about-us/thirdExample.png'
-import formImage1 from '../../assets/about-us/formImage1.png'
-import formImage2 from '../../assets/about-us/formImage2.png'
-import wayOfCalculatingImage from '../../assets/about-us/analysis.png'
-import ExemplesImage from '../../assets/about-us/exemples.png'
-import RecommendationsImage from '../../assets/about-us/recommended.png'
-import LowRiskImage from '../../assets/about-us/low-risk.png'
-import FindSupportImage from '../../assets/about-us/find-support.png'
-import Card from '../../components/card/card.component'
+import firstExample from '../../../assets/about-us/firstExample.png'
+import secondExample from '../../../assets/about-us/secondExample.png'
+import thirdExample from '../../../assets/about-us/thirdExample.png'
+import formImage1 from '../../../assets/about-us/formImage1.png'
+import formImage2 from '../../../assets/about-us/formImage2.png'
+import wayOfCalculatingImage from '../../../assets/about-us/analysis.png'
+import ExemplesImage from '../../../assets/about-us/exemples.png'
+import RecommendationsImage from '../../../assets/about-us/recommended.png'
+import LowRiskImage from '../../../assets/about-us/low-risk.png'
+import FindSupportImage from '../../../assets/about-us/find-support.png'
+import Card from '../../../components/card/card.component'
 import { useState, useRef } from 'react'
 
 const Aboutus = () => {
@@ -122,7 +122,7 @@ const Aboutus = () => {
     return (
         <>
             <div className='aboutus-hero' style={{
-                    backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(' + require(`../../assets/about-us/aboutusImage.jpg`) + ')'
+                    backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(' + require(`../../../assets/about-us/aboutusImage.jpg`) + ')'
                 }}>
                     <div className='title-container'>
                         <h1>What we do, how we do</h1>

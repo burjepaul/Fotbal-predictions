@@ -1,15 +1,14 @@
 import './coming-soon.styles.scss'
 
-
-import comingSoonImage1 from '../../assets/comingsoon-example1.png'
-import comingSoonImage2 from '../../assets/comingsoon-example2.jpg'
-import comingSoonImage3 from '../../assets/comingsoon-example3.jpg'
+import comingSoonImage1 from '../../../assets/comingsoon-example1.png'
+import comingSoonImage2 from '../../../assets/comingsoon-example2.jpg'
+import comingSoonImage3 from '../../../assets/comingsoon-example3.jpg'
 
 const ComingSoon = () => {
     return(
         <div className='coming-soon-page'>
             <div className='improvement-hero' style={{
-                 backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(' + require(`../../assets/improvements-hero-image.jpg`) + ')'
+                 backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(' + require(`../../../assets/improvements-hero-image.jpg`) + ')'
             }}>
                 {/* <img src={heroImage} alt="hero" className='hero-image'/> */}
                 <h1>Upcoming projects</h1>
