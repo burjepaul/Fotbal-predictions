@@ -1,6 +1,9 @@
 import React from "react";
 import './footer.styles.scss'
 import { Outlet } from "react-router-dom";
+import {ReactComponent as TwitterSvg} from "../../assets/twitter.svg"
+import {ReactComponent as InstagramSvg} from "../../assets/instagram.svg"
+import {ReactComponent as Facebook} from "../../assets/facebook.svg"
 
 const Footer = () => {
     return(
@@ -8,10 +11,10 @@ const Footer = () => {
         <Outlet/>
         <div className="top-line"></div>
         <div className="footer-container">
-                <div>
-                    <h2>
+                <div className="footer-column">
+                    <h3>
                         <a href="/">TheOracle.com</a>
-                    </h2>
+                    </h3>
                         
                     <h5>
                         <a href="/terms-of-use">Terms of Use</a>
@@ -23,8 +26,7 @@ const Footer = () => {
                         <a href="/contact">Contact</a>
                     </h5>
                 </div>
-                <div>
-                    <br/>
+                <div className="footer-column">
                     <br/>
                     <h5>
                         <a href="/mobile">Mobile</a>
@@ -37,25 +39,25 @@ const Footer = () => {
                     </h5>
                 </div>
 
-            <div>
-                <h2>
+            <div className="footer-column">
+                <h3>
                     <a href="/">Follow</a>
-                </h2>
+                </h3>
                 <h5>
-                    <a href="/">Twitter</a>
+                    <TwitterSvg className="social-media-svg twitter"/>
                 </h5>
                 <h5>
-                    <a href="/">Instagram</a>
+                    <InstagramSvg className="social-media-svg instagram"/>
                 </h5>
                 <h5>
-                    <a href="/">Facebook</a>
+                    <Facebook className="social-media-svg facebook"/>
                 </h5>
             </div>
 
-            <div>
-                <h2>
+            <div className="footer-column">
+                <h3>
                     <a href="/">Mobile apps</a>
-                </h2>
+                </h3>
                 <h5>
                     <a href="/">Find our mobile app for free on:</a>
                 </h5>
