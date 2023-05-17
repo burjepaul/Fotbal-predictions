@@ -30,7 +30,7 @@ const Footer = () => {
                 </div>
                 <div className="footer-column">
                     <br/>
-                    <h5>
+                    <h5 style={{marginTop:15}}>
                         <a href="/mobile">Mobile</a>
                     </h5>
                     <h5>
@@ -42,8 +42,8 @@ const Footer = () => {
                 </div>
 
             <div className="footer-column">
-                <h3>
-                    <a href="/">Follow</a>
+                <h3 className="followText">
+                    Follow
                 </h3>
                 <div className="social-media-svg">
                     <TwitterSvg className="twitter"/>
@@ -58,13 +58,13 @@ const Footer = () => {
 
             <div className="footer-column">
                 <h3>
-                    <a href="/">Mobile apps</a>
+                    Mobile apps
                 </h3>
                 <h5>
                     <a href="/">Find our mobile app for free on:</a>
                 </h5>
                 <h5>
-                    <a href="https://play.google.com/store/apps/details?id=com.fotbal.predictions">
+                    <a href="https://play.google.com/store/apps/details?id=com.fotbal.predictions" target="_blank" rel="noreferrer">
                     <img src={googlePlayLogo} alt="GooglePlay" className="applications-images"/>
                     </a>
                 </h5>
