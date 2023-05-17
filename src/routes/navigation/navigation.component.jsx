@@ -30,7 +30,7 @@ const Navigation = () => {
     
     const viewportWidth = window.innerWidth;
 
-    if (viewportWidth < 500 ) {
+    if (viewportWidth < 600 ) {
     return (
         <Fragment>
             <div style={{width:'100%', height:'9vh'}}>
