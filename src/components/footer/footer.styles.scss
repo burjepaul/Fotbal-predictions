@@ -84,6 +84,9 @@
             h5 a{
                 font-size: var(--step-1);
                 color: var(--color-title);
+                .applications-images{
+                    width: 4rem
+                }
             }
         }
     }
