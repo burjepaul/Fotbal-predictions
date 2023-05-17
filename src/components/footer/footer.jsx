@@ -43,15 +43,15 @@ const Footer = () => {
                 <h3>
                     <a href="/">Follow</a>
                 </h3>
-                <h5>
-                    <TwitterSvg className="social-media-svg twitter"/>
-                </h5>
-                <h5>
-                    <InstagramSvg className="social-media-svg instagram"/>
-                </h5>
-                <h5>
-                    <Facebook className="social-media-svg facebook"/>
-                </h5>
+                <div className="social-media-svg">
+                    <TwitterSvg className="twitter"/>
+                </div>
+                <div className="social-media-svg">
+                    <InstagramSvg className="instagram"/>
+                </div>
+                <div className="social-media-svg">
+                    <Facebook className="facebook"/>
+                </div>
             </div>
 
             <div className="footer-column">
