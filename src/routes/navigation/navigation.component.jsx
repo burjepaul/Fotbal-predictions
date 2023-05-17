@@ -1,7 +1,7 @@
 import { Fragment, useState } from "react"
 import { Outlet, Link } from "react-router-dom"
 
-import {ReactComponent as Logo} from '../../assets/logo.svg'
+import {ReactComponent as Logo} from '../../assets/logos/logo.svg'
 
 import './navigation.styles.scss'
 import './burger-menu.styles.scss'

@@ -1,9 +1,11 @@
 import React from "react";
 import './footer.styles.scss'
 import { Outlet } from "react-router-dom";
-import {ReactComponent as TwitterSvg} from "../../assets/twitter.svg"
-import {ReactComponent as InstagramSvg} from "../../assets/instagram.svg"
-import {ReactComponent as Facebook} from "../../assets/facebook.svg"
+import {ReactComponent as TwitterSvg} from "../../assets/logos/twitter.svg"
+import {ReactComponent as InstagramSvg} from "../../assets/logos/instagram.svg"
+import {ReactComponent as Facebook} from "../../assets/logos/facebook.svg"
+import googlePlayLogo from '../../assets/logos/google-play-badge.png'
+import huaweiAppGallery from '../../assets/logos/appgallery.png'
 
 const Footer = () => {
     return(
@@ -62,10 +64,14 @@ const Footer = () => {
                     <a href="/">Find our mobile app for free on:</a>
                 </h5>
                 <h5>
-                    <a href="/">Poza</a>
+                    <a href="https://play.google.com/store/apps/details?id=com.fotbal.predictions">
+                    <img src={googlePlayLogo} alt="GooglePlay" className="applications-images"/>
+                    </a>
                 </h5>
                 <h5>
-                    <a href="/">Poza</a>
+                    <a href="/">
+                        <img src={huaweiAppGallery} alt="GooglePlay" className="applications-images"/>
+                    </a>
                 </h5>
             </div>
         </div>

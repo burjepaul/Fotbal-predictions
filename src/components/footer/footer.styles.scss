@@ -25,6 +25,9 @@
         h5 a{
             font-size: var(--step--0);
             color: var(--color-title);
+            .applications-images{
+                width: 8rem
+            }
 
         }
         .social-media-svg{
@@ -75,7 +78,7 @@
                 width: 25%;
                 margin-top: -2%;
                 text-align: center;
-                align-self: center;
+                align-self: flex-end;
             }
 
             h5 a{
