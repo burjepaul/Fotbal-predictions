@@ -13,7 +13,7 @@ const TodayMatches = () => {
             setIsLoadingData(true)
             setError(null)
             try{
-                const response = await fetch('https://1d50-2a02-2f07-d910-f00-115a-abbb-d794-31a3.ngrok-free.app/todayMatches', {
+                const response = await fetch('https://fotbal.herokuapp.com/todayMatches', {
                     method: "get",
                     headers: new Headers({
                       "ngrok-skip-browser-warning": "69420",
