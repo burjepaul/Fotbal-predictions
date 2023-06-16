@@ -13,12 +13,7 @@ const TodayMatches = () => {
             setIsLoadingData(true)
             setError(null)
             try{
-                const response = await fetch('https://fotbal.herokuapp.com/todayMatches', {
-                    method: "get",
-                    headers: new Headers({
-                      "ngrok-skip-browser-warning": "69420",
-                    }),
-                })
+                const response = await fetch('https://fotbal.herokuapp.com/todayMatches')
                 if (!response.ok){
                 throw new Error('Something went wrong!')
                 }
