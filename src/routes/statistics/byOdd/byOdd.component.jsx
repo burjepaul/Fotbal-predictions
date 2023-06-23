@@ -1,11 +1,9 @@
 import { useEffect, useState, useReducer } from "react"
-import Spinner from "../../../components/spinner/spinner"
-import Circle from "../../../components/statistics-circle/statisitics-circle.components"
 
 import "./byOdd.styles.scss"
 
 const ByOdd = () => {  
-    const [oddStats, setOddStats] = useState() 
+    const [setOddStats] = useState() 
     
     const initialValues = {
         oddOverValue: 2,
