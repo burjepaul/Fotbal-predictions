@@ -5,12 +5,15 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { StatisticsProvider } from './contexts/statistics.context';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <StatisticsProvider>
+        <App />
+      </StatisticsProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

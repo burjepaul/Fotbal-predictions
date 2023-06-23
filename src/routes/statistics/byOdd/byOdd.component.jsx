@@ -123,7 +123,7 @@ const ByOdd = () => {
                     <button className="statistics-button">Find</button>
                 </form>
                 <div className='circle'>
-                    {oddStats ? <Circle oddStats={oddStats}/> : <Spinner/>}
+                    {/* {oddStats ? <Circle oddStats={oddStats}/> : <Spinner/>} */}
                 </div>
             </div>
     )

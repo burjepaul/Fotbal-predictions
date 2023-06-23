@@ -1,26 +1,26 @@
 import "./statistics-circle.styles.scss"
 import { ReactComponent as CircleSvg } from "../../assets/circle.svg"
 
-const Circle = ({oddStats}) => {
-    let percent = 270 - (oddStats.total_wins/oddStats.total_games)*270 + '%'
+const Circle = ({leagueStats}) => {
+    let percent = 270 - (leagueStats.total_win/leagueStats.total_games)*270 + '%'
     return (
         <div className="container">
             <div className="outer">
                 <div className="inner">
                     <div className="number">
                         <h2>
-                        {oddStats.total_wins}/{oddStats.total_games}
+                        {leagueStats.total_win}/{leagueStats.total_games}
                         </h2>
                         <br></br>
                         <h2>
-                        {((oddStats.total_wins/oddStats.total_games)*100).toFixed(0)} %
+                        {((leagueStats.total_win/leagueStats.total_games)*100).toFixed(0)} %
                         </h2>
                     </div>
                 </div>
             </div>
             <CircleSvg style={{"--percent-value": percent}}/>
-            {oddStats.average_odd_win ? <h4>Average odd win: {oddStats.average_odd_win}</h4> : ''}
-            {oddStats.average_odd_lost ? <h4>Average odd lost: {oddStats.average_odd_lost}</h4> : ''}
+            {leagueStats.average_odd_win ? <h4>Average odd win: {leagueStats.average_odd_win.toFixed(2)}</h4> : ''}
+            {leagueStats.average_odd_lost ? <h4>Average odd lost: {leagueStats.average_odd_lost.toFixed(2)}</h4> : ''}
         </div>
     )
 }

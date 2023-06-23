@@ -1,0 +1,16 @@
+.radio-buttons{
+    color: var(--color-title);
+    margin-top: 5%;
+    align-items: start;
+    text-align: start;
+    label{
+        display: flex;
+        justify-content: space-between;
+        h4{
+            display: inline;
+        }
+        input{
+            
+        }
+    }
+}

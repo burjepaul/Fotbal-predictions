@@ -73,7 +73,7 @@ const ComingSoon = () => {
                         <h2>Mobile App</h2>
                         <p>
                             &nbsp;&nbsp;&nbsp;A mobile application is available on <a href="https://play.google.com/store/apps/details?id=com.fotbal.predictions" target="_blank" rel="noreferrer">Google Play Store</a> and Huawei App Gallery. Due to high costs for now it won't be published on App Store.<br/>
-                            &nbsp;&nbsp;&nbsp;The application it's in the early stage of construction and you can meet crushes or poor user experience, although the predictions are 100% the same.
+                            &nbsp;&nbsp;&nbsp;The application it's in the early stage of construction and you may meet crushes or poor user experience, although the predictions are 100% same.
                         </p>
                     </div>
                 </div>
