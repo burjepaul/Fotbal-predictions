@@ -73,7 +73,7 @@ const ByOdd = () => {
                 setOddStats(data)
             }
             fetchOddQuery()
-        },[state.oddOverQuerry, state.oddUnderQuerry, state.predictionQuerry])
+        },[state.oddOverQuerry, state.oddUnderQuerry, state.predictionQuerry, setOddStats])
         
         return (
             <div className='win-percentage-odds'>
