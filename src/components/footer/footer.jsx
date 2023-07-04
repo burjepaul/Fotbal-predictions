@@ -69,8 +69,8 @@ const Footer = () => {
                     </a>
                 </h5>
                 <h5>
-                    <a href="/">
-                        <img src={huaweiAppGallery} alt="GooglePlay" className="applications-images"/>
+                    <a href="https://appgallery.huawei.com/app/C108277163" target="_blank" rel="noreferrer">
+                        <img src={huaweiAppGallery} alt="AppGalery" className="applications-images"/>
                     </a>
                 </h5>
             </div>
