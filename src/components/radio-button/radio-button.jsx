@@ -17,12 +17,12 @@ function RadioButtons({onButtonChange}) {
       </label>
       <br />
       <label>
-        Predictions on results
+        On results
         <input type="radio" value="final_result" checked={selectedOption === 'final_result'} onChange={handleChange} />
       </label>
       <br />
       <label>
-      Predictions on goals
+      On goals
         <input type="radio" value="goals" checked={selectedOption === 'goals'} onChange={handleChange} />
       </label>
     </div>

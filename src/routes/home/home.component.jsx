@@ -34,6 +34,7 @@ function Home() {
       path : '/statistics'
     },
   ]
+
   return (
     <div>
         <Outlet/>

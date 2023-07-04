@@ -11,7 +11,11 @@ const Statistics = () => {
 
     let output
     if (!statistics) output = <Spinner/>
-    else output = <ByCountry statistics={statistics} className='byCountryItem'/>
+    else output = 
+    <>
+        <ByCountry statistics={statistics} className='by-country-item'/>
+        <Tops statistics={statistics}/>
+    </>
 
     return (
         <Fragment>
@@ -19,9 +23,6 @@ const Statistics = () => {
             <div className='statistics-container'>
                 {/* <ByOdd className='byOddItem'/> */}
                 {output}
-                <div className='topsItem'>
-                    <Tops/>
-                </div>
             </div>
         </Fragment>
     )

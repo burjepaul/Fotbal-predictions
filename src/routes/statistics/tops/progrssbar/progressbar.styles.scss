@@ -2,25 +2,40 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin-left: auto;
-    margin-right: auto;
     
+    p{
+    }
+    
+    .games-text{
+        color:var(--color-title);
+        font-size: var(--step-1);
+        width: 15%;
+    }
+
     .progressbar{
         position: relative;
         overflow: hidden;
-        width: 30vw;
+        width: 60%;
         height: 4vh;
         border-radius: 5px;
+        margin: 0 5%;
         background-color:var(--color-lost);
     }
     
     .progressPercent{
         font-size: var(--step-2);
-        color: var(--color-title);
+        color: var(--color-text);
         position: absolute;
         left: 50%;
         top: 20%;
         transform: translate(-50%, -50%);
+    }
+
+    .progress-country-league{
+        p{
+            font-size: var(--step-0);
+            color:var(--color-title);
+        }
     }
 }
 

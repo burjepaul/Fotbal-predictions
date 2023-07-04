@@ -44,6 +44,11 @@
         font-size: var(--step-2);
         color:var(--color-text);
     }
+
+    .radio-buttons-group{
+        margin-left: auto;
+        margin-right: auto;
+    }
     
     input:focus, select:focus {
         outline: none;        
@@ -56,8 +61,8 @@
     }
 
     .circle{  
-        .missing-data-title{
-        }
+        width: 50%;
+        margin: 0 auto 5% auto;
     }
 }
 @media screen and (max-width: 950px) {

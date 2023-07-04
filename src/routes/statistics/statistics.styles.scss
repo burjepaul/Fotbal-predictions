@@ -7,17 +7,17 @@ h1{
 .statistics-container{
     display: grid;
     grid-template-columns: auto auto;
-    padding: 0% 15%;
-    gap: 15%;
+    padding: 0% 5%;
+    gap: 5%;
     text-align: center;
 
-    .topsItem{
-        grid-column-start: 1;
-        grid-column-end: 3;
+    .by-country-item{
+        width: 100px;
+        background-color: red;
     }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1000px) {
     .statistics-container{
         display: block;
         margin: 10% 0%;
