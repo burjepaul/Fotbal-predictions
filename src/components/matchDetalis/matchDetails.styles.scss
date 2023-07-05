@@ -1,0 +1,25 @@
+.details-container{
+    margin-bottom: 0;
+
+    p{
+     
+    }
+
+    .detail-bar{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        p{
+            width: 30%;
+        }
+        .wins-number{
+            white-space: nowrap;
+        }
+    }
+
+    .detail-progrssbar{
+        margin: 4%;
+        width: 100%;
+        min-width: 150px;
+    }
+}

@@ -1,7 +1,13 @@
 import { Fragment } from 'react';
+import {ReactComponent as ArrowDown} from '../../assets/arrow-down.svg'
+import {ReactComponent as ArrowUp} from '../../assets/arrow-up.svg'
 import './match.styles.scss'
+import { useState } from 'react';
+import MatchDetails from '../matchDetalis/matchDetails';
 
 const Match = (props) => {
+  const [displayDetails, setDisplayDetails] = useState(false)
+
   const {playing_date, playing_hour, country, league, home_team, away_team, prediction, odd, result} = props
 
   let formatPrediction
@@ -18,18 +24,22 @@ const Match = (props) => {
   }
     return (
       <>
-        <div className='match-header'
-         
-        >
+      <div className='match-header'>
+        <div className='match-header-nodetails'>
           <div 
             className='flag-image'
             style= {{
               backgroundImage: 'url(' + require(`../../assets/flag/${country}.png`) + ')'                
             }}   
-          />
+            />
           <h3>{country} - {league}</h3>
+          <div className="gameArrows">
+            {displayDetails ? <ArrowUp onClick={() => setDisplayDetails(!displayDetails)}/> : <ArrowDown onClick={() => setDisplayDetails(!displayDetails)}/>}
+          </div>
         </div>
-        
+        {displayDetails ? <MatchDetails country={country} league={league} prediction={prediction}/> : null}
+        </div>
+
         <div className='match' 
             style={ result === undefined ? {backgroundColor: "var(--color-components)"} : 
             result === 'WIN' ? {backgroundColor: "var(--color-win)"} : 
