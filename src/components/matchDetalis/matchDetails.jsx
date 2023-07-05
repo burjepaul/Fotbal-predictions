@@ -12,7 +12,6 @@ const MatchDetails = ({country, league, prediction}) => {
     const dataCountry = createStatisticsAllLeagusByCountry(statistics, country)
     const dataLeague = statistics.find((statisticEntry) => (statisticEntry.country === country) && statisticEntry.league === league)
 
-    console.log(statistics)
     return(
         <div className='details-container'>
             <div className='detail-bar'>
