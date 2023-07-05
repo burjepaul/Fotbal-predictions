@@ -2,4 +2,13 @@
     color: black;
     font-size: var(--step-2);
     font-weight: bolder;
+    align-self: start;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.detail-progrssbar{
+    margin: 4%;
+    width: 100%;
+    min-width: 150px;
 }
