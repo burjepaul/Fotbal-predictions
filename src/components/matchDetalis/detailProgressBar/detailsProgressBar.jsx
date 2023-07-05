@@ -14,7 +14,7 @@ const DetailProgressBar = ({percent}) => {
             borderRadius='5px'
             className='detail-progrssbar'
             width='100%'
-            height='2vh'
+            height='3.5vh'
             bgColor={`hsl(${hslValue}, 100%, 50%)`}
             baseBgColor="rgb(136, 16, 16)"
             labelClassName="label"
