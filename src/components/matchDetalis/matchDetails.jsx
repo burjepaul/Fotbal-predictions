@@ -12,8 +12,10 @@ const MatchDetails = ({country, league, prediction}) => {
     const dataCountry = createStatisticsAllLeagusByCountry(statistics, country)
     const dataLeague = statistics.find((statisticEntry) => (statisticEntry.country === country) && statisticEntry.league === league)
 
-    return(
-        <div className='details-container'>
+    if (existsCountry){
+
+        return(
+            <div className='details-container'>
             <div className='detail-bar'>
                 <p>{country}</p>
                 <DetailProgressBar percent={dataCountry.total_win_percentage}/>
@@ -32,7 +34,7 @@ const MatchDetails = ({country, league, prediction}) => {
             {
                 prediction.length > 4 && exitstLeague ? //if it's an on Goals(true) or on Final Result(false) 
                     dataLeague.total_games_goals > 10 ? //if there are more than 10 matches on Goals display league stats else display country stats      
-                        <div className='detail-bar'>
+                    <div className='detail-bar'>
                             <p>{league} on Goals</p>
                             <DetailProgressBar percent={dataLeague.win_percentage_goals}/>
                             <p className='wins-number'>{dataLeague.win_goals} wins of {dataLeague.total_games_goals}</p>
@@ -45,8 +47,8 @@ const MatchDetails = ({country, league, prediction}) => {
                         </div>  
                 :
                     exitstLeague ?
-                        dataLeague.total_final_result > 10 ?
-                            <div className='detail-bar'>
+                    dataLeague.total_final_result > 10 ?
+                    <div className='detail-bar'>
                                 <p>{league} on Results</p>
                                 <DetailProgressBar percent={dataLeague.win_percentage_final_result}/>
                                 <p className='wins-number'>{dataLeague.win_final_result} wins of {dataLeague.total_games_final_result}</p>
@@ -66,6 +68,12 @@ const MatchDetails = ({country, league, prediction}) => {
             }
         </div>
     )
+}
+else {
+    return(
+        <p>No data available for this Country</p>
+    )
+}
 }
 
 export default MatchDetails
