@@ -7,14 +7,9 @@ h1{
 .statistics-container{
     display: grid;
     grid-template-columns: auto auto;
-    padding: 0% 5%;
+    padding: 0% 2%;
     gap: 5%;
     text-align: center;
-
-    .by-country-item{
-        width: 100px;
-        background-color: red;
-    }
 }
 
 @media screen and (max-width: 1000px) {

@@ -13,7 +13,7 @@ const Statistics = () => {
     if (!statistics) output = <Spinner/>
     else output = 
     <>
-        <ByCountry statistics={statistics} className='by-country-item'/>
+        <ByCountry statistics={statistics}/>
         <Tops statistics={statistics}/>
     </>
 

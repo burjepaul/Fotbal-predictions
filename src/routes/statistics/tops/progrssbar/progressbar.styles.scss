@@ -2,6 +2,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    margin-right: 10%;
     
     .games-text{
         color:var(--color-title);
@@ -38,7 +39,6 @@
 
 @media screen and (max-width: 950px) {
     .progress-container{
-        margin-right: 10%;
     
     .progressbar{
         width: 50vw;
