@@ -4,11 +4,14 @@ import {ReactComponent as ArrowUp} from '../../assets/arrow-up.svg'
 import './match.styles.scss'
 import { useState } from 'react';
 import MatchDetails from '../matchDetalis/matchDetails';
+import { convertToUTC } from '../../config/helpers';
 
 const Match = (props) => {
-  const [displayDetails, setDisplayDetails] = useState(false)
-
   const {playing_date, playing_hour, country, league, home_team, away_team, prediction, odd, result} = props
+  
+  const [displayDetails, setDisplayDetails] = useState(false)
+  
+  const utcTime = convertToUTC(playing_date, playing_hour)
 
   let formatPrediction
   if(prediction === "1")
@@ -49,7 +52,7 @@ const Match = (props) => {
             >
           <div className='match-content'>
             <div  className='date'>
-              <h5>{playing_date} at {playing_hour}</h5>
+              <h5>{utcTime[0]} at {utcTime[1]}</h5>
             </div>
             
             <div className='matchDetails'>

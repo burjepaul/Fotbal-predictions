@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import './matchDetails.styles.scss'
 import { StatisticsContext } from '../../contexts/statistics.context'
-import createStatisticsAllLeagusByCountry from '../../config/helpers'
+import {createStatisticsAllLeagusByCountry} from '../../config/helpers'
 import DetailProgressBar from './detailProgressBar/detailsProgressBar'
 
 const MatchDetails = ({country, league, prediction}) => {

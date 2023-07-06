@@ -1,4 +1,4 @@
-const createStatisticsAllLeagusByCountry = (statistics, country) =>{
+export const createStatisticsAllLeagusByCountry = (statistics, country) =>{
     //Sums all leagues from a specific country and creates a data template to match the others datas from DB 
     const allDataForCountry = statistics.filter((statisticEntry) => statisticEntry.country === country)
     const sum_total_games = allDataForCountry.reduce((acc, obj) => {
@@ -82,5 +82,20 @@ const createStatisticsAllLeagusByCountry = (statistics, country) =>{
 
     return dataTemplate
 }
+export const convertToUTC = (date, time) => {
+    // Create a new Date object with the provided date and time
+    const localDateTime = new Date(`${date}T${time}:00+03:00`);
+    // Get the local date and time components
+    const localYear = localDateTime.getFullYear();
+    const localMonth = localDateTime.getMonth() + 1; // Months are zero-based, so we add 1
+    const localDay = localDateTime.getDate();
+    const localHour = localDateTime.getHours();
+    const localMinute = localDateTime.getMinutes();
 
-export default createStatisticsAllLeagusByCountry
+    // Format the local date and time
+    const localDate = `${localYear}-${localMonth.toString().padStart(2, '0')}-${localDay.toString().padStart(2, '0')}`;
+    const localTime = `${localHour.toString().padStart(2, '0')}:${localMinute.toString().padStart(2, '0')}`;
+  
+    // Return the formatted UTC date and time
+    return [localDate, localTime];
+}

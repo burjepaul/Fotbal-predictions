@@ -4,7 +4,7 @@ import {useEffect, useReducer, useState } from "react"
 import Circle from "../../../components/statistics-circle/statisitics-circle.components"
 import Spinner from "../../../components/spinner/spinner"
 import RadioButtons from "../../../components/radio-button/radio-button"
-import createStatisticsAllLeagusByCountry from "../../../config/helpers"
+import {createStatisticsAllLeagusByCountry} from "../../../config/helpers"
 
 
 const ByCountry = ({statistics}) => {
