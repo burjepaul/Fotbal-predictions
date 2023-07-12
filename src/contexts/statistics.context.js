@@ -17,6 +17,7 @@ export const StatisticsProvider = ({children}) => {
     }, []
     )
     
+    console.log(statistics)
     useEffect(() => {
         fetchStatistics()
     },[fetchStatistics])

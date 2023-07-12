@@ -59,7 +59,7 @@ const Circle = ({leagueStats}) => {
                 <></>
             }{leagueStats.average_odd_lost ? 
                 <>
-                    <p style={{color:"wheat"}}>Average Odd Win: {leagueStats.average_odd_lost.toFixed(2)}</p>
+                    <p style={{color:"wheat"}}>Average Odd  Lost: {leagueStats.average_odd_lost.toFixed(2)}</p>
                 </> 
                 : 
                 <></>

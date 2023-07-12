@@ -92,6 +92,7 @@ export const convertToUTC = (date, time) => {
     const localHour = localDateTime.getHours();
     const localMinute = localDateTime.getMinutes();
 
+
     // Format the local date and time
     const localDate = `${localYear}-${localMonth.toString().padStart(2, '0')}-${localDay.toString().padStart(2, '0')}`;
     const localTime = `${localHour.toString().padStart(2, '0')}:${localMinute.toString().padStart(2, '0')}`;
