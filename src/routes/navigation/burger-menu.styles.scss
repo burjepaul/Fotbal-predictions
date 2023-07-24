@@ -12,6 +12,7 @@ nav{
     padding: 3%;
     position: absolute;
     display: inline-block;
+    z-index: 1;
 }
 
 .burger-menu{
@@ -23,6 +24,7 @@ nav{
     justify-content: space-between;
     cursor: pointer;
     margin-top: 15px;
+    z-index: 1;
 }
 
 .burger-bar{
