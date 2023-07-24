@@ -1,7 +1,7 @@
 import {Outlet } from 'react-router-dom';
 import Directory from '../../components/directory/directory.component';
 import ReactPlayer from 'react-player'
-import video1 from '../../assets/LogoVideo.mp4'
+import video1 from '../../assets/LogoFirst.mp4'
 
 import './home.styles.scss'
 
@@ -43,7 +43,7 @@ function Home() {
     <div>
         <Outlet/>
         <div className='main-header'>
-          <ReactPlayer url={video1} height={"50vh"} width={"70vw"} loop={true} playing={true} muted={true}/>
+          <ReactPlayer url={video1} height={"50vh"} width={"70vw"} loop={true} playing={true} muted={true} controls={true}/>
           <h1>Professional Auto-Generated Football Predictions</h1>
         </div>
         <Directory categories={categories}/>
