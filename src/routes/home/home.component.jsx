@@ -1,9 +1,13 @@
 import {Outlet } from 'react-router-dom';
 import Directory from '../../components/directory/directory.component';
-import video1 from '../../assets/LogoFirst.mp4'
-import video2 from '../../assets/LogoFirst.webm'
+import videoFirstMp4 from '../../assets/LogoFirst.mp4'
+import videoFirstWebm from '../../assets/LogoFirst.webm'
+
+import videoSecondMp4 from '../../assets/LogoSecond.mp4'
+import videoSecondWebm from '../../assets/LogoSecond.webm'
 
 import './home.styles.scss'
+import { useState } from 'react';
 
 function Home() {
   const categories = [
@@ -39,14 +43,23 @@ function Home() {
     },
   ]
 
+  const [loopVideo, setLoopVideo] = useState(true)
+
   return (
     <div>
         <Outlet/>
         <div className='main-header'>
-          <video autoPlay={true} muted={true}>
-            <source src={video2} type="video/webm" />
-            <source src={video1} type="video/mp4" />
+
+          <video autoPlay={true} muted={true} style={{display: loopVideo ? "block" : "none"}} onEnded={() => setLoopVideo(false)}>
+            <source src={videoFirstWebm} type="video/webm" />
+            <source src={videoFirstMp4} type="video/mp4" />
           </video>
+
+          <video autoPlay={true} muted={true} loop={true} style={{display: loopVideo ? "none" : "block"}}>
+            <source src={videoSecondWebm} type="video/webm" />
+            <source src={videoSecondMp4} type="video/mp4" />
+          </video>
+          
           <h1>Professional Auto-Generated Football Tips</h1>
         </div>
         <Directory categories={categories}/>
