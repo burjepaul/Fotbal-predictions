@@ -67,10 +67,10 @@ function Home() {
             <div className='mobile-logos'>
 
               <a href="https://play.google.com/store/apps/details?id=com.fotbal.predictions" target="_blank" rel="noreferrer">
-                <button className='app-button'> <GooglePlaySvg/> Google Play</button>
+                <button className='app-button'> <GooglePlaySvg/> <p>Google Play</p></button>
               </a>
               <a href="https://appgallery.huawei.com/app/C108277163" target="_blank" rel="noreferrer">
-                <button className='app-button'><HuaweiSvg/>App Gallery</button>
+                <button className='app-button'><HuaweiSvg/> <p>App Gallery</p></button>
               </a>
               
             </div>
