@@ -123,20 +123,22 @@ export const GetCurrentScrollHeight = () => {
 
 export const GetPositionOfanElementInPage = (divRef) => {
     const [divPosition, setDivPosition] = useState({ top: 0, left: 0 });
+    const updatePosition = () => {
+        if (divRef.current) {
+          const { bottom, top } = divRef.current.getBoundingClientRect();
+          setDivPosition({ bottom, top });
+        }
+      };
     useEffect(() => {
-        const updatePosition = () => {
-            if (divRef.current) {
-              const { bottom, top } = divRef.current.getBoundingClientRect();
-              setDivPosition({ bottom, top });
-            }
-          };
         updatePosition();
         // Optionally, you can also listen for window resize events to update the position dynamically
-        window.addEventListener('resize', updatePosition);
+        window.addEventListener('scroll', updatePosition);
+        window.addEventListener('loadstart', updatePosition);
         return () => {
-          window.removeEventListener('resize', updatePosition);
+            window.removeEventListener('scroll', updatePosition);
+            window.addEventListener('loadstart', updatePosition);
         };
-      }, [divRef]);
+      }, []);
 
       return divPosition
 }

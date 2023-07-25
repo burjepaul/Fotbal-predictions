@@ -20,7 +20,7 @@ const CategoryItem = ({category, handlePredictionCategory}) => {
                         className='background-image'
                         style= {{
                             backgroundImage: 'url(' + require(`../../assets/${imageUrl}.png`) + ')',
-                            opacity:`${percentageToShow}%`
+                            opacity:`${percentageToShow ? percentageToShow : 0}%`
                         }}    
                         />
                     <div className='category-body-container'>
