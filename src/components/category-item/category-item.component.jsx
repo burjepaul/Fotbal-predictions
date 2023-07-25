@@ -9,9 +9,6 @@ const CategoryItem = ({category, handlePredictionCategory}) => {
 
     const percentageToShow = OpacityPercentage(elementRef)
 
-    console.log(title)
-    console.log(percentageToShow)
-
     return (
         id < 10 ? 
             <Link className='category-container' to={path}>

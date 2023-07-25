@@ -105,7 +105,6 @@ export const convertToUTC = (date, time) => {
 
 export const GetCurrentScrollHeight = () => {
     const [scrollHeight, setScrollHeight] = useState(window.innerHeight)
-
     useEffect(() => {
         const handleScroll = () => {
             setScrollHeight(window.scrollY + window.innerHeight)
@@ -122,27 +121,27 @@ export const GetCurrentScrollHeight = () => {
 }
 
 export const GetPositionOfanElementInPage = (divRef) => {
-    const [divPosition, setDivPosition] = useState({ top: 0, left: 0 });
-    const updatePosition = () => {
-        if (divRef.current) {
-          const { bottom, top } = divRef.current.getBoundingClientRect();
-          setDivPosition({ bottom, top });
-        }
-      };
+    const [divPosition, setDivPosition] = useState({ bottom: 0, top: 0 });
     useEffect(() => {
+        const updatePosition = () => {
+            if (divRef.current) {
+              const { bottom, top } = divRef.current.getBoundingClientRect();
+              setDivPosition({ bottom, top });
+            }
+          };
         updatePosition();
         // Optionally, you can also listen for window resize events to update the position dynamically
         window.addEventListener('scroll', updatePosition);
-        window.addEventListener('loadstart', updatePosition);
+        window.addEventListener('resize', updatePosition);
         return () => {
             window.removeEventListener('scroll', updatePosition);
-            window.addEventListener('loadstart', updatePosition);
+            window.removeEventListener('resize', updatePosition);
         };
-      }, []);
+      }, [divRef]);
 
       return divPosition
 }
 
 export const OpacityPercentage = (elementRef) => {
-    return (GetCurrentScrollHeight() - GetPositionOfanElementInPage(elementRef).top)/(GetPositionOfanElementInPage(elementRef).bottom - GetPositionOfanElementInPage(elementRef).top)*100
+    return (window.innerHeight*95/100 - GetPositionOfanElementInPage(elementRef).top)/(GetPositionOfanElementInPage(elementRef).bottom - GetPositionOfanElementInPage(elementRef).top)*100
 }
