@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react"
+
 export const createStatisticsAllLeagusByCountry = (statistics, country) =>{
     //Sums all leagues from a specific country and creates a data template to match the others datas from DB 
     const allDataForCountry = statistics.filter((statisticEntry) => statisticEntry.country === country)
@@ -99,4 +101,46 @@ export const convertToUTC = (date, time) => {
   
     // Return the formatted UTC date and time
     return [localDate, localTime];
+}
+
+export const GetCurrentScrollHeight = () => {
+    const [scrollHeight, setScrollHeight] = useState(window.innerHeight)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrollHeight(window.scrollY + window.innerHeight)
+        }
+
+        window.addEventListener('scroll', handleScroll)
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+          };
+    },[])
+
+    return(scrollHeight)
+}
+
+export const GetPositionOfanElementInPage = (divRef) => {
+    const [divPosition, setDivPosition] = useState({ top: 0, left: 0 });
+    useEffect(() => {
+        const updatePosition = () => {
+            if (divRef.current) {
+              const { bottom, top } = divRef.current.getBoundingClientRect();
+              setDivPosition({ bottom, top });
+            }
+          };
+        updatePosition();
+        // Optionally, you can also listen for window resize events to update the position dynamically
+        window.addEventListener('resize', updatePosition);
+        return () => {
+          window.removeEventListener('resize', updatePosition);
+        };
+      }, [divRef]);
+
+      return divPosition
+}
+
+export const OpacityPercentage = (elementRef) => {
+    return (GetCurrentScrollHeight() - GetPositionOfanElementInPage(elementRef).top)/(GetPositionOfanElementInPage(elementRef).bottom - GetPositionOfanElementInPage(elementRef).top)*100
 }
