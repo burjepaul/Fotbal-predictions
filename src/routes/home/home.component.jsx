@@ -5,6 +5,8 @@ import videoFirstWebm from '../../assets/LogoFirst.webm'
 
 import videoSecondMp4 from '../../assets/LogoSecond.mp4'
 import videoSecondWebm from '../../assets/LogoSecond.webm'
+import {ReactComponent as GooglePlaySvg} from '../../assets/google-play.svg'
+import {ReactComponent as HuaweiSvg} from '../../assets/huawei.svg'
 
 import './home.styles.scss'
 import { useState } from 'react';
@@ -50,18 +52,34 @@ function Home() {
         <Outlet/>
         <div className='main-header'>
 
-          <video autoPlay={true} muted={true} style={{display: loopVideo ? "block" : "none"}} onEnded={() => setLoopVideo(false)}>
-            <source src={videoFirstWebm} type="video/webm" />
-            <source src={videoFirstMp4} type="video/mp4" />
-          </video>
+          <div className='video-container'>
 
-          <video autoPlay={true} muted={true} loop={true} style={{display: loopVideo ? "none" : "block"}}>
-            <source src={videoSecondWebm} type="video/webm" />
-            <source src={videoSecondMp4} type="video/mp4" />
-          </video>
+            <video autoPlay={true} muted={true} style={{display: loopVideo ? "block" : "none"}} onEnded={() => setLoopVideo(false)}>
+              <source src={videoFirstWebm} type="video/webm" />
+              <source src={videoFirstMp4} type="video/mp4" />
+            </video>
+
+            <video autoPlay={true} muted={true} loop={true} style={{display: loopVideo ? "none" : "block"}}>
+              <source src={videoSecondWebm} type="video/webm" />
+              <source src={videoSecondMp4} type="video/mp4" />
+            </video>
+
+            <div className='mobile-logos'>
+
+              <a href="https://play.google.com/store/apps/details?id=com.fotbal.predictions" target="_blank" rel="noreferrer">
+                <button className='app-button'> <GooglePlaySvg/> Google Play</button>
+              </a>
+              <a href="https://appgallery.huawei.com/app/C108277163" target="_blank" rel="noreferrer">
+                <button className='app-button'><HuaweiSvg/>App Gallery</button>
+              </a>
+              
+            </div>
+
+        </div>
           
           <h1>Auto-Generated Football Tips</h1>
         </div>
+
         <Directory categories={categories}/>
         <Outlet/>
     </div>

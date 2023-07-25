@@ -2,10 +2,36 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    video{
-        margin-top: -10%;
-        width: 70%;
-        height: auto;
+
+    .video-container{
+        video{
+            margin-top: -10%;
+            width: 90%;
+            height: auto;
+            
+        }
+        .mobile-logos{
+            z-index: 1;
+            display: flex;
+            width: 90%;
+            justify-content: center;
+            a{
+                margin:-0% 2% 15%;
+            }
+            .app-button{
+                width: 10rem;
+                padding: 6% 4%;
+                border: none;
+                white-space: nowrap; 
+
+                #google-play, #huawei{
+                    width: 13%;
+                    margin-right: 5%;
+                    margin-top: 0%;
+                }
+                
+            }
+        }
     }
 
     h1{
@@ -20,9 +46,26 @@
         display: block;
         position: relative;
         
-    video{
-        width: 160%;
-        margin-left: -25%;
+    .video-container{
+
+        video{
+            width: 160%;
+            margin-left: -25%;
+            margin-top: -20%;
+        }
+        .mobile-logos{
+            width: 100%;
+            a{
+                margin:0% 2% 10%;
+            }
+            .app-button{
+                padding: 5% 1%;
+            }
+
+            #google-play, #huawei{
+                margin-right: 2%;
+            }
+        }
     }
     h1{
         text-shadow: #FC0 1px 1px 3px;
