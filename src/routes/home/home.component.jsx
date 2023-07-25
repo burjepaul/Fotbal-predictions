@@ -77,7 +77,7 @@ function Home() {
 
         </div>
           
-          <h1>Auto-Generated Football Tips</h1>
+          <h1>Auto-Generated Football Tips, <br></br>Using Binary Power</h1>
         </div>
 
         <Directory categories={categories}/>
