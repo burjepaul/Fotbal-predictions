@@ -60,7 +60,7 @@ function Home() {
             <source src={videoSecondMp4} type="video/mp4" />
           </video>
           
-          <h1>Professional Auto-Generated Football Tips</h1>
+          <h1>Auto-Generated Football Tips</h1>
         </div>
         <Directory categories={categories}/>
         <Outlet/>
