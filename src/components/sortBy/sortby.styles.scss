@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   margin: 5% 0 2% 0;
-
   h2{
       font-size: var(--step-3);
       margin: 0;
@@ -12,14 +11,13 @@
   button{
       background-color: #ffee0000;
       color: var(--color-title);
-      height: auto;
       border:none;
       width:fit-content;
+      height: 5vh;
       color: var(color-title);
       cursor: pointer;
       transition: 1s;
       z-index: 2;
-    
     
       .dropdown-arrow{
         display: flex;
