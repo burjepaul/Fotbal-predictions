@@ -3,10 +3,11 @@ import { useEffect, useRef, useState } from 'react';
 import Match from '../match/match.component';
 import {ReactComponent as NextPageArrow} from '../../assets/pagearrow-right.svg'
 import {ReactComponent as PreviousPageArrow} from '../../assets/pagearrow-left.svg'
-import papirusLanding from '../../assets/output_video.mp4'
-import './matchesList.styles.scss'
+import papirusLandingMp4 from '../../assets/papirusVideo.mp4'
+import papirusLandingWebm from '../../assets/papirusVideo.webm'
 import SortBy from '../sortBy/sortby.component';
 import CategoryItem from '../category-item/category-item.component';
+import './matchesList.styles.scss'
 
 const MatchesList = React.forwardRef((props, ref) => {
   const [, setActiveDropDownItem] = useState("Playing hour")
@@ -121,7 +122,8 @@ const MatchesList = React.forwardRef((props, ref) => {
       
       <div className='video-container'>
         <video autoPlay={true} muted={true}>
-          <source src={papirusLanding} type="video/mp4"/>
+          <source src={papirusLandingMp4} type="video/mp4"/>
+          <source src={papirusLandingWebm} type="video/webm"/>
         </video>
       </div>
       
