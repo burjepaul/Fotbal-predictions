@@ -50,7 +50,7 @@ const SortBy = ({matches, handleActiveDropDownItem}) => {
 
     return (
     <div className='sort-component'>
-        <h2>Sort by :&nbsp;&nbsp;
+        <h2>Sort by :&nbsp;&nbsp;</h2>
               <button onClick={handleDropDown}>
                 <div className='dropdown-arrow'>
                   <DropDownArrow/>
@@ -64,7 +64,6 @@ const SortBy = ({matches, handleActiveDropDownItem}) => {
               <div className='drop-down-item' onClick={handleDropDownItem2}>{activeDropDown[2]}</div>
               <div className='drop-down-item' onClick={handleDropDownItem3}>{activeDropDown[3]}</div>
           </div>
-        </h2>
     </div>
     )
 }

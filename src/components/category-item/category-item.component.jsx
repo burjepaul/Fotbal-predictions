@@ -29,7 +29,8 @@ const CategoryItem = ({category, handlePredictionCategory}) => {
                 <div
                     className='background-image'
                     style= {{
-                        backgroundImage: 'url(' + require(`../../assets/${imageUrl}.png`) + ')'
+                        backgroundImage: 'url(' + require(`../../assets/${imageUrl}.png`) + ')',
+                        opacity: "65%"
                     }}    
                     />
                     <div className='category-body-container'>

@@ -1,15 +1,38 @@
+import React from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Match from '../match/match.component';
 import {ReactComponent as NextPageArrow} from '../../assets/pagearrow-right.svg'
 import {ReactComponent as PreviousPageArrow} from '../../assets/pagearrow-left.svg'
+import papirusLanding from '../../assets/output_video.mp4'
 import './matchesList.styles.scss'
-import { useState } from 'react';
 import SortBy from '../sortBy/sortby.component';
 import CategoryItem from '../category-item/category-item.component';
 
-const MatchesList = (props) => {
+const MatchesList = React.forwardRef((props, ref) => {
   const [, setActiveDropDownItem] = useState("Playing hour")
   const [activePage, setActivePage] = useState(1)
   const [predictionsToRender, setPredictionsToRender] = useState('')
+  
+  const categoryItemRef = useRef(null)
+
+  useEffect(() => {
+    const scrollToTarget = () => {
+      if (categoryItemRef.current) {
+        // Get the position of the target div relative to the viewport
+        const targetPosition = categoryItemRef.current.getBoundingClientRect().top;
+
+        // Perform the smooth scroll
+        window.scrollTo({
+          top: targetPosition + window.scrollY,
+          behavior: 'smooth',
+        });
+      }
+    };
+
+    // Scroll to the target div only if it exists
+    scrollToTarget();
+  }, []);
+
 
   const prePageCategories = [
     {
@@ -91,47 +114,57 @@ const MatchesList = (props) => {
         
   return (
     <div className='matches-list'>
-        <div className='predictions-to-render'> 
+        <div className='predictions-to-render' ref={ categoryItemRef}> 
           <CategoryItem key={prePageCategories[1].id} category={prePageCategories[1]} handlePredictionCategory={handlePredictionCategory}/>
           <CategoryItem key={prePageCategories[0].id} category={prePageCategories[0]} handlePredictionCategory={handlePredictionCategory}/>
-
+        </div>
+      
+      <div className='video-container'>
+        <video autoPlay={true} muted={true}>
+          <source src={papirusLanding} type="video/mp4"/>
+        </video>
       </div>
+      
       {matchesToRender ? 
-      <div>
+      <div className='list-of-matches'>
         <div className='pagination-sort'>
-          <div></div>
+            <SortBy matches={props.matches} handleActiveDropDownItem={handleActiveDropDownItem}/>
+          </div>
+          {matchesToRender.slice(activePage * 10 - 10, activePage * 10).map((match) => (
+            <Match
+            key={match.id}
+            playing_date={match.playing_date}
+            country={match.country}
+            league={match.league}
+            home_team={match.home_team}
+            away_team={match.away_team}
+            prediction={match.prediction}
+            odd={match.odd}
+            playing_hour={match.playing_hour}
+            result={match.result}
+            />
+          ))}
+
           <div className='pagination'>
+
               <div className='arrows' onClick={() => handlePages(-1)}>
                   <PreviousPageArrow/>
               </div>
-              <h2 className="title">Page&nbsp;&nbsp;</h2>
-              <h2 className="title">{activePage}/{totalPages}</h2>
+
+              <p className="page-title">Page&nbsp;&nbsp;</p>
+              <p className="page-title">{activePage}/{totalPages}</p>
+
               <div className='arrows' onClick={() => handlePages(+1)}>
                   <NextPageArrow/>
               </div>
-            </div>
-            <SortBy matches={props.matches} handleActiveDropDownItem={handleActiveDropDownItem}/>
+
           </div>
-{        matchesToRender.slice(activePage * 10 - 10, activePage * 10).map((match) => (
-          <Match
-          key={match.id}
-          playing_date={match.playing_date}
-          country={match.country}
-          league={match.league}
-          home_team={match.home_team}
-          away_team={match.away_team}
-          prediction={match.prediction}
-          odd={match.odd}
-          playing_hour={match.playing_hour}
-          result={match.result}
-          />
-        ))}
-          </div>
+      </div>
       
       :
       <h2>Select a category from above</h2>}
     </div>
   );
-};
+});
 
 export default MatchesList;

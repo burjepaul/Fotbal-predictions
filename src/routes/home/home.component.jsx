@@ -1,8 +1,8 @@
 import {Outlet } from 'react-router-dom';
 import Directory from '../../components/directory/directory.component';
+
 import videoFirstMp4 from '../../assets/LogoFirst.mp4'
 import videoFirstWebm from '../../assets/LogoFirst.webm'
-
 import videoSecondMp4 from '../../assets/LogoSecond.mp4'
 import videoSecondWebm from '../../assets/LogoSecond.webm'
 import {ReactComponent as GooglePlaySvg} from '../../assets/google-play.svg'

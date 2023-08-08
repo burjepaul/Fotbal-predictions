@@ -1,6 +1,6 @@
 :root{
   --color-background: black;
-  --color-title: wheat;
+  --color-title: #f5deb3;
   --color-text: rgb(95, 67, 14);
   --color-components: rgba(29, 85, 3, 0.836);
   --color-win:rgb(16, 109, 16);
@@ -22,7 +22,8 @@ body {
   font-family: 'Amiri','Nanum Myeongjo','Noto Serif Ahom',sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--color-background)
+  background-color: var(--color-background);
+  scroll-behavior: smooth;
 }
 
 code {
