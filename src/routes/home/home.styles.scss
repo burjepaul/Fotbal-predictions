@@ -20,12 +20,13 @@
             }
             .app-button{
                 width: 10rem;
-                padding: 0;
                 border: none;
                 white-space: nowrap; 
                 display: flex;
                 justify-content: space-evenly;
                 padding: 5%;
+                background-color: var(--color-text);
+                box-shadow: 1px 1px 6px 2px rgba(255, 255, 255, 0.2);
                 p{
                     margin: 3% 0% 0%;
                 }
@@ -33,6 +34,12 @@
                     width: 13%;
                 }
                 
+            }
+
+            .app-button:hover{
+                cursor: pointer;
+                transform: scale(1.1);
+                transition: 0.5s ease-in-out;
             }
         }
     }
