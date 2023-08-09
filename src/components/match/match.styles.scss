@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Amiri&family=Noto+Serif+Ahom&display=swap');
 
 .match-header {
-  color:var(--color-title);
+  color:var(--color-text);
   width: 45%;
   border-top-right-radius: 60%;
   border-top-left-radius: 60%;
@@ -43,19 +43,34 @@
 
 
 .match {
-  background-color: var(--color-components);
-  box-shadow: 3px 3px 16px 2px rgba(255, 255, 255, 0.13);
   text-align: center;
   color: #ac7903;
   font-family: 'Amiri', 'Noto Serif Ahom', serif;
+  border-bottom: 1px solid black;
 
+  h4, h5 {
+    font-size: var(--step-0);
+    text-shadow: rgb(0, 0, 0) 0px 0 20px;
+    color: var(--color-title);
+  }
+  
   .match-content{
     max-width: 1200px;
-    margin: 0% auto 4%;
-    padding: 0% 5%;
+    margin: 0% auto 0%;
+    padding: 0% 9%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+    .predictionodd{
+      display: flex;
+      justify-content: space-between;
+      width: 25%;
+      
+      img{
+        width: 45%;
+      }
+    }
   }
 }
 
@@ -64,27 +79,11 @@ body{
   font-size: var(--step-1);
 }
 
-.match h3 {
-  font-size: var(--step-2);
-  color: var(--color-title)
-}
-
-.match h4 {
-  font-size: var(--step-1);
-}
-
-.match .predictionodd{
-  display: flex;
-  justify-content: space-around;
-}
 
 .prediction{
   white-space:nowrap;
 }
 
-.result{
-  padding-left: 20%;
-}
 
 @media screen and (max-width: 950px) {
 .match-header{
@@ -97,7 +96,23 @@ body{
 }
 
 .match{
-  margin-bottom: max(2vh, 1rem);
+  .match-content{
+    padding: 0%;
+    justify-content: space-around;
+    
+    .predictionodd{
+      display: inline;
+      width: 25%;
+      
+      .odd{
+        margin-right: 20%;
+      }
+
+      img{
+        width: 45%;
+      }
+    }
+  }
 }
 body{
   font-size: var(--step-0);

@@ -1,10 +1,14 @@
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
+
+import { convertToUTC } from '../../config/helpers';
+import MatchDetails from '../matchDetalis/matchDetails';
+
 import {ReactComponent as ArrowDown} from '../../assets/arrow-down.svg'
 import {ReactComponent as ArrowUp} from '../../assets/arrow-up.svg'
+import Checked from '../../assets/checked.png'
+import XMark from '../../assets/XMark.png'
+
 import './match.styles.scss'
-import { useState } from 'react';
-import MatchDetails from '../matchDetalis/matchDetails';
-import { convertToUTC } from '../../config/helpers';
 
 const Match = (props) => {
   const {playing_date, playing_hour, country, league, home_team, away_team, prediction, odd, result} = props
@@ -43,14 +47,9 @@ const Match = (props) => {
         {displayDetails ? <MatchDetails country={country} league={league} prediction={prediction}/> : null}
         </div>
 
-        <div className='match' 
-            style={ result === undefined ? {backgroundColor: "var(--color-components)"} : 
-            result === 'WIN' ? {backgroundColor: "var(--color-win)"} : 
-            result === 'LOST'? {backgroundColor: "var(--color-lost)"}:
-            {backgroundColor: "var(--color-postponed)"}
-            }  
-            >
+        <div className='match'>
           <div className='match-content'>
+            
             <div  className='date'>
               <h5>{utcTime[0]} at {utcTime[1]}</h5>
             </div>
@@ -63,23 +62,22 @@ const Match = (props) => {
             </div>
       
             <div className='predictionodd'>
-              <div className='odd'>
-                {odd === undefined || odd === 0 ? 
-                null :
-                <Fragment>
-                    <h4>{odd === 0 ? '-':odd}</h4>
-                </Fragment>
-              }
-              </div>
-              <div className='result'>
-                {result === undefined ? 
-                null :
-                  <Fragment>
-                    <h4>{result}</h4>
-                  </Fragment>
+                <div className='odd'>
+                  {odd === undefined || odd === 0 ? 
+                  null :
+                      <h4>{odd === 0 ? '-':odd}</h4>
                 }
-              </div>
-          </div>
+                </div>
+
+                  {result === undefined ? 
+                  null :
+                      result === 'WIN' ?
+                          <img className='lost-won-image' alt='WIN' src={Checked}/>
+                        :
+                          <img className='lost-won-image' alt='LOST'  src={XMark}/>
+                    }
+            </div>
+
           </div>
         </div>
       </>
