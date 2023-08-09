@@ -61,7 +61,14 @@ const Match = (props) => {
                 </div>
             </div>
       
-            <div className='predictionodd'>
+            <div className='predictionodd'
+              style={
+                result === undefined ? 
+                {display:"inline"}
+                :
+                {display:"flex"}
+              }
+            >
                 <div className='odd'>
                   {odd === undefined || odd === 0 ? 
                   null :
