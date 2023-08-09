@@ -97,11 +97,11 @@ body{
 
 .match{
   .match-content{
+    width: 80%;
     padding: 0%;
     justify-content: space-around;
     
     .predictionodd{
-      display: inline;
       width: 25%;
       
       .odd{
@@ -109,7 +109,7 @@ body{
       }
 
       img{
-        width: 45%;
+        width: 35%;
       }
     }
   }
