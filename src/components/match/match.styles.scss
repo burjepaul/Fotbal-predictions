@@ -27,7 +27,6 @@
     width: 35px;
     margin-top: 3%;
     margin-right: 5%;
-    float: right;
   }
 
   .gameArrows{
@@ -87,8 +86,9 @@ body{
 
 @media screen and (max-width: 950px) {
 .match-header{
-  width: fit-content;
-  min-width: 50%;
+  width: 100%;
+  white-space: nowrap;
+  margin-bottom: -2%;
   .flag-image{
     height: 15px;
     width: 20px;
@@ -97,7 +97,7 @@ body{
 
 .match{
   .match-content{
-    width: 80%;
+    width: 88%;
     padding: 0%;
     justify-content: space-around;
     
