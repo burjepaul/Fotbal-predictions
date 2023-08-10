@@ -1,5 +1,6 @@
 .match-header {
   color:var(--color-text);
+  text-shadow: rgb(0, 0, 0) 0px 0 30px;
   width: 45%;
   border-top-right-radius: 60%;
   border-top-left-radius: 60%;
@@ -8,7 +9,7 @@
   font-family: 'Baskervville','Cormorant Garamond','Libre Caslon Text','Baskervville', 'Amiri', serif;
   
   .match-header-nodetails{
-    color:var(--color-title);
+    color:var(--color-text);
     display: flex;
     align-items: center;
     justify-content: center;
