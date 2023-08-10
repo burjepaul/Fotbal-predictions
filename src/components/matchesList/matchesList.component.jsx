@@ -40,12 +40,12 @@ const MatchesList = React.forwardRef((props, ref) => {
   const prePageCategories = [
     {
       id: 10,
-      title: 'Goals Goals Goals',
+      title: 'On Goals',
       imageUrl : "GoalsImage",
     },
     {
       id: 11,
-      title: '1 X 2',
+      title: 'On Winners',
       imageUrl : "1x2Image",
     },
 ]
@@ -97,11 +97,11 @@ const MatchesList = React.forwardRef((props, ref) => {
   let matchesToRender
   let totalPages
     switch (predictionsToRender){
-      case "Goals Goals Goals":
+      case "On Goals":
         matchesToRender = matches[0]
         totalPages = Math.ceil(matchesToRender.length/10)
         break
-      case "1 X 2":
+      case "On Winners":
         matchesToRender = matches[1]
         totalPages = Math.ceil(matchesToRender.length/10)
         break
