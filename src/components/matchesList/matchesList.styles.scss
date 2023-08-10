@@ -1,8 +1,8 @@
 .matches-list {
     margin: 0;
-     
+    
     .video-container{
-
+      
       video{
         height: auto;
         width: 100%;
@@ -16,26 +16,23 @@
         
       }
     }
-      .predictions-to-render{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-      }
-      
-      h2{ 
-        color: var(--color-title);
-        padding-bottom: 2%;
+    .predictions-to-render{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
     }
+    
     
     .list-of-matches{
       height: 20vh;
-
+      opacity: 1;
+      animation: fadeIn 2s ease-in-out forwards;
     }
     .pagination{
       display: flex;
       align-items: center;
       justify-content: center;
-
+      
       .arrows{
         fill: var(--color-title);
         padding: 0 4%;
@@ -50,51 +47,56 @@
         font-size: var(--step-2);
         margin-bottom: 2%;
       }
-      }
-      
-}
-  @media screen and (max-width: 1800px){
-    .matches-list {
-      .video-container{
-        right:-100%;
-        overflow: hidden;
-        video{
-          position: absolute; /* Set the video to absolute positioning */
-          left: -23%; /* Move the video to the left */
-          width: 140%; /* Increase the width to cover the overflow */
-          height: auto;
-        }
-      }
-        
+    }
+  h2{ 
+    opacity: 1;
+    animation: fadeIn 2s ease-in-out forwards;
   }
 }
-  @media screen and (max-width: 1280px){
-    .matches-list {
-      .video-container{
-        right:-100%;
-        overflow: hidden;
-        video{
-          position: absolute; /* Set the video to absolute positioning */
-          left: -32%; /* Move the video to the left */
-          width: 160%; /* Increase the width to cover the overflow */
-          height: auto;
-        }
-      }
-        
+  
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
-  @media screen and (max-width: 780px){
-    .matches-list {
-      .video-container{
-        right:-100%;
-        overflow: hidden;
-        video{
-          position: absolute; /* Set the video to absolute positioning */
-          left: -50%; /* Move the video to the left */
-          width: 200%; /* Increase the width to cover the overflow */
-          height: auto;
-        }
-      }
-        
-  }
-}
+
+@media screen and (max-width: 1800px){
+  .matches-list {
+    .video-container{
+      right:-100%;
+      overflow: hidden;
+      video{
+        position: absolute; /* Set the video to absolute positioning */
+        left: -23%; /* Move the video to the left */
+        width: 140%; /* Increase the width to cover the overflow */
+        height: auto;
+}}}}
+
+
+@media screen and (max-width: 1280px){
+  .matches-list {
+    .video-container{
+      right:-100%;
+      overflow: hidden;
+      video{
+        position: absolute; /* Set the video to absolute positioning */
+        left: -32%; /* Move the video to the left */
+        width: 160%; /* Increase the width to cover the overflow */
+        height: auto;
+}}}}
+
+@media screen and (max-width: 780px){
+  .matches-list {
+    .video-container{
+      right:-100%;
+      overflow: hidden;
+      video{
+        position: absolute; /* Set the video to absolute positioning */
+        left: -50%; /* Move the video to the left */
+        width: 200%; /* Increase the width to cover the overflow */
+        height: auto;
+}}}}

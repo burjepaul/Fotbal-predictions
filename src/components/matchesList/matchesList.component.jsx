@@ -14,6 +14,7 @@ const MatchesList = React.forwardRef((props, ref) => {
   const [, setActiveDropDownItem] = useState("Playing hour")
   const [activePage, setActivePage] = useState(1)
   const [predictionsToRender, setPredictionsToRender] = useState('')
+  const [hasVideoEnded, setHasVideoEnded] = useState(false)
   
   const categoryItemRef = useRef(null)
 
@@ -122,53 +123,64 @@ const MatchesList = React.forwardRef((props, ref) => {
         </div>
       
       <div className='video-container'>
-        <video autoPlay={true} muted={true}>
+        <video autoPlay={true} muted={true} onEnded={()=>{setHasVideoEnded(true)}}>
           <source src={papirusLandingWebm} type="video/webm"/>
           <source src={papirusLandingMp4} type="video/mp4"/>
           <source src={papirusLandingOgv} type="video/ogg"/>
         </video>
       </div>
-      
-      {matchesToRender ? 
-      <div className='list-of-matches'>
-        <div className='pagination-sort'>
-            <SortBy matches={props.matches} handleActiveDropDownItem={handleActiveDropDownItem}/>
-          </div>
-          {matchesToRender.slice(activePage * 10 - 10, activePage * 10).map((match) => (
-            <Match
-            key={match.id}
-            playing_date={match.playing_date}
-            country={match.country}
-            league={match.league}
-            home_team={match.home_team}
-            away_team={match.away_team}
-            prediction={match.prediction}
-            odd={match.odd}
-            playing_hour={match.playing_hour}
-            result={match.result}
-            />
-          ))}
+      {hasVideoEnded ?
+        <>
+          {matchesToRender  ? 
+            <div className='list-of-matches'>
 
-          <div className='pagination'>
+              <div className='pagination-sort'>
+                <SortBy matches={props.matches} handleActiveDropDownItem={handleActiveDropDownItem}/>
+              </div>
 
-              <div className='arrows' onClick={() => handlePages(-1)}>
+              {matchesToRender.slice(activePage * 10 - 10, activePage * 10).map((match) => (
+                <Match
+                  key={match.id}
+                  playing_date={match.playing_date}
+                  country={match.country}
+                  league={match.league}
+                  home_team={match.home_team}
+                  away_team={match.away_team}
+                  prediction={match.prediction}
+                  odd={match.odd}
+                  playing_hour={match.playing_hour}
+                  result={match.result}
+                />
+                ))}
+                
+                <div className='pagination'>
+                
+                  <div className='arrows' onClick={() => handlePages(-1)}>
                   <PreviousPageArrow/>
-              </div>
-
-              <p className="page-title">Page&nbsp;&nbsp;</p>
-              <p className="page-title">{activePage}/{totalPages}</p>
-
-              <div className='arrows' onClick={() => handlePages(+1)}>
+                  </div>
+                  
+                  <p className="page-title">Page&nbsp;&nbsp;</p>
+                  <p className="page-title">{activePage}/{totalPages}</p>
+                  
+                  <div className='arrows' onClick={() => handlePages(+1)}>
                   <NextPageArrow/>
-              </div>
-
-          </div>
-      </div>
-      
-      :
-      <h2>Select a category from above</h2>}
+                  </div>
+                  
+                </div>
+                
+            </div>
+            :
+            <div className='select-text'>
+              <h2>Select a category from above</h2>
+            </div>
+            }
+        </>
+            :
+            <></>
+          }
     </div>
   );
 });
+    
 
 export default MatchesList;
