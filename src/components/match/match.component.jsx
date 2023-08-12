@@ -1,4 +1,4 @@
-import { Fragment, useState } from 'react';
+import { Fragment } from 'react';
 
 import { convertToUTC } from '../../config/helpers';
 import MatchDetails from '../matchDetalis/matchDetails';
@@ -11,10 +11,8 @@ import XMark from '../../assets/XMark.png'
 import './match.styles.scss'
 
 const Match = (props) => {
-  const {playing_date, playing_hour, country, league, home_team, away_team, prediction, odd, result} = props
-  
-  const [displayDetails, setDisplayDetails] = useState(false)
-  
+  const {id, playing_date, playing_hour, country, league, home_team, away_team, prediction, odd, result, displayDetailsForID, setDisplayDetailsForID} = props
+
   const utcTime = convertToUTC(playing_date, playing_hour)
 
   let formatPrediction
@@ -39,12 +37,27 @@ const Match = (props) => {
               backgroundImage: 'url(' + require(`../../assets/flag/${country}.png`) + ')'                
             }}   
             />
-          <h3>{country} - {league}</h3>
+          <h3>{country} - {league} - {id}</h3>
           <div className="gameArrows">
-            {displayDetails ? <ArrowUp onClick={() => setDisplayDetails(!displayDetails)}/> : <ArrowDown onClick={() => setDisplayDetails(!displayDetails)}/>}
+            {
+            displayDetailsForID === id ?
+              <ArrowUp onClick={() => {
+                setDisplayDetailsForID(0)
+              }}/> 
+              :
+              <ArrowDown onClick={() => {
+                setDisplayDetailsForID(id)
+              }}/>
+            
+            }
           </div>
         </div>
-        {displayDetails ? <MatchDetails country={country} league={league} prediction={prediction}/> : null}
+        {
+        displayDetailsForID === id ? 
+            <MatchDetails country={country} league={league} prediction={prediction}/> 
+          : 
+            null
+        }
         </div>
 
         <div className='match'>

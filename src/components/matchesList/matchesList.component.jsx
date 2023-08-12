@@ -15,6 +15,7 @@ const MatchesList = React.forwardRef((props, ref) => {
   const [activePage, setActivePage] = useState(1)
   const [predictionsToRender, setPredictionsToRender] = useState('')
   const [hasVideoEnded, setHasVideoEnded] = useState(false)
+  const [displayDetailsForID, setDisplayDetailsForID] = useState(0)
   
   const categoryItemRef = useRef(null)
 
@@ -141,6 +142,7 @@ const MatchesList = React.forwardRef((props, ref) => {
               {matchesToRender.slice(activePage * 10 - 10, activePage * 10).map((match) => (
                 <Match
                   key={match.id}
+                  id={match.id}
                   playing_date={match.playing_date}
                   country={match.country}
                   league={match.league}
@@ -150,6 +152,8 @@ const MatchesList = React.forwardRef((props, ref) => {
                   odd={match.odd}
                   playing_hour={match.playing_hour}
                   result={match.result}
+                  displayDetailsForID = {displayDetailsForID}
+                  setDisplayDetailsForID = {setDisplayDetailsForID}
                 />
                 ))}
                 
