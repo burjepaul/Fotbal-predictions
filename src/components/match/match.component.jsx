@@ -37,7 +37,7 @@ const Match = (props) => {
               backgroundImage: 'url(' + require(`../../assets/flag/${country}.png`) + ')'                
             }}   
             />
-          <h3>{country} - {league} - {id}</h3>
+          <h3>{country} - {league}</h3>
           <div className="gameArrows">
             {
             displayDetailsForID === id ?
