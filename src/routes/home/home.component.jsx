@@ -7,6 +7,7 @@ import videoFirstMp4 from '../../assets/LogoFirst.mp4'
 import videoFirstWebm from '../../assets/LogoFirst.webm'
 import videoSecondMp4 from '../../assets/LogoSecond.mp4'
 import videoSecondWebm from '../../assets/LogoSecond.webm'
+import ballSystemVideo from '../../assets/ball-system.mp4'
 import {ReactComponent as GooglePlaySvg} from '../../assets/google-play.svg'
 import {ReactComponent as HuaweiSvg} from '../../assets/huawei.svg'
 
@@ -29,8 +30,6 @@ function Home() {
     total_lost = statistics.reduce((acc, obj) => {
       return acc + obj.total_lost
     }, 0)
-    
-      console.log(total_wins, total_lost)
   }
 
   const categories = [
@@ -103,34 +102,41 @@ function Home() {
 
         <Directory categories={categories}/>
         <div className='statistics-hero' 
-          ref={elementRef}
-          style= {{
-            opacity:`${percentageToShow ? percentageToShow : 0}%`
-        }} 
-        >
-          <h2>Empowering bettors with efficient football analysis. Our platform offers curated data, expert perspectives, and trends, reducing time spent on research and enhancing betting strategies for success.</h2>
-          <div className='the-four-containers'>
-            <div className='grid-item'>
-              <h4>With a total of</h4> 
-              <h1>{total_wins}</h1>
-              <h4>games won</h4>
+            ref={elementRef}
+            style= {{
+              opacity:`${percentageToShow ? percentageToShow : 0}%`
+          }} 
+          >
+            <h2>Empowering bettors with efficient football predictions. Our platform offers curated data, automated analysis, and trends, reducing time spent on research and enhancing betting strategies for success.</h2>
+            <div className='the-four-containers'>
+              <div className='grid-item'>
+                <h4>With a total of</h4> 
+                <h1>{total_wins}</h1>
+                <h4>games won</h4>
+              </div>
+              <div className='grid-item'>
+                <h4>An average of</h4> 
+                <h1>{(total_wins/(total_wins+total_lost)*100).toFixed(0)}%</h1>
+                <h4>win percentage</h4>
+              </div>
+              <div className='grid-item'>
+                <h4>Days with over</h4> 
+                <h1>150</h1>
+                <h4>tips</h4>
+              </div>
+              <div className='grid-item'>
+                <h4>Highest odd win</h4> 
+                <h1>7.92</h1>
+                <h4>on 26 May 2023</h4>
+              </div>
             </div>
-            <div className='grid-item'>
-              <h4>An average of</h4> 
-              <h1>{(total_wins/(total_wins+total_lost)*100).toFixed(0)}%</h1>
-              <h4>win percentage</h4>
-            </div>
-            <div className='grid-item'>
-              <h4>Days with over</h4> 
-              <h1>150</h1>
-              <h4>tips</h4>
-            </div>
-            <div className='grid-item'>
-              <h4>Highest odd win</h4> 
-              <h1>7.92</h1>
-              <h4>on 26 May 2023</h4>
-            </div>
-          </div>
+        </div>
+        <div className='ball-system'>
+          <video autoPlay={true} muted={true} loop={true} playbackRate={0.5}>
+              <source src={ballSystemVideo} type="video/mp4" />
+          </video>
+          <div></div>
+          <h2>My football predictions cover global leagues, from English Premier League to the bottom leagues of all world's countries.</h2>
         </div>
         <Outlet/>
     </div>
