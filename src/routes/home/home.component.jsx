@@ -17,8 +17,10 @@ import { OpacityPercentage } from '../../config/helpers';
 function Home() {
   const {statistics} = useContext(StatisticsContext)
   const elementRef = useRef(null)
+  const systemRef = useRef(null)
 
   const percentageToShow = OpacityPercentage(elementRef)
+  const percentageToShowSystem = OpacityPercentage(systemRef)
 
   let total_wins = 0
   let total_lost = 0
@@ -131,7 +133,12 @@ function Home() {
               </div>
             </div>
         </div>
-        <div className='ball-system'>
+        <div className='ball-system'
+          ref={systemRef}
+          style= {{
+          opacity:`${percentageToShowSystem ? percentageToShowSystem : 0}%`
+          }} 
+          >
           <video autoPlay={true} muted={true} loop={true} playbackRate={0.5}>
               <source src={ballSystemVideo} type="video/mp4" />
           </video>
