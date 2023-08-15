@@ -10,6 +10,7 @@ import videoSecondWebm from '../../assets/LogoSecond.webm'
 import ballSystemVideo from '../../assets/ball-system.mp4'
 import {ReactComponent as GooglePlaySvg} from '../../assets/google-play.svg'
 import {ReactComponent as HuaweiSvg} from '../../assets/huawei.svg'
+import transparencyPhoto from '../../assets/transparency-photo.png'
 
 import './home.styles.scss'
 import { OpacityPercentage } from '../../config/helpers';
@@ -18,9 +19,11 @@ function Home() {
   const {statistics} = useContext(StatisticsContext)
   const elementRef = useRef(null)
   const systemRef = useRef(null)
+  const transparencyRef = useRef(null)
 
   const percentageToShow = OpacityPercentage(elementRef)
   const percentageToShowSystem = OpacityPercentage(systemRef)
+  const percentageToShowTransparency = OpacityPercentage(transparencyRef)
 
   let total_wins = 0
   let total_lost = 0
@@ -147,9 +150,14 @@ function Home() {
           <h2>Universal Football Fortune: Precise Global League Predictions from Every Corner of the World.</h2>
         </div>
 
-        <div className='transparency'>
-          <div></div>
+        <div className='transparency-hero'
+          ref={transparencyRef}
+          style= {{
+          opacity:`${percentageToShowTransparency ? percentageToShowTransparency : 0}%`
+          }}         
+        >
           <h2>We provide 100% full transparency of our results, either is lost or win with 1.01 odd, the data is available and used for further analyse.</h2>
+          <img src={transparencyPhoto} alt='transparency-phto' className='transparency-photo'/>
         </div>
         <Outlet/>
     </div>

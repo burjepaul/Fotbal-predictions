@@ -101,6 +101,27 @@
         width: 100%;
         position: absolute;
         z-index: -1;
+        margin-right: 10%;
+    }
+}
+
+.transparency-hero{
+    max-width: 1200px;
+    margin: 28% auto;
+    align-items: center;
+    text-shadow: 0px 0px 1px var(--color-title);
+    display: flex;
+    
+    h2{
+        width: 60%;
+    }
+
+    img{
+        height: 100vh;
+        position: absolute;
+        z-index: -1;
+        right: 0;
+        transform: rotate(5deg);
     }
 }
 
@@ -154,7 +175,8 @@
     }
     .ball-system{
         justify-content: center;
-    
+        margin:40% 0%;
+        
         h2{
             width: 80%;
             margin-bottom: 20%;
@@ -165,6 +187,23 @@
 
             z-index: -1;
             margin-top: 10%;
+        }
+    }
+
+    .transparency-hero{
+        justify-content: center;
+        
+        h2{
+            width: 60%;
+            margin-top: 40%;
+        }
+        
+        img{
+            margin-top: 40%;
+            height: 50vh;
+            position: absolute;
+            z-index: -1;
+            right: 0;
         }
     }
 }
