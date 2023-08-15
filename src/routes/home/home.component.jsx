@@ -25,7 +25,7 @@ function Home() {
   const percentageToShowSystem = OpacityPercentage(systemRef)
   const percentageToShowTransparency = OpacityPercentage(transparencyRef)
 
-  let total_wins = 0
+  let total_wins = 1
   let total_lost = 0
 
   if (statistics){
