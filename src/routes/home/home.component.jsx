@@ -109,7 +109,7 @@ function Home() {
               opacity:`${percentageToShow ? percentageToShow : 0}%`
           }} 
           >
-            <h2>Empowering bettors with efficient football predictions. Our platform offers curated data, automated analysis, and trends, reducing time spent on research and enhancing betting strategies for success.</h2>
+            <h2>Our platform offers curated data, automated analysis, and trends, reducing time spent on research and enhancing betting strategies for success.</h2>
             <div className='the-four-containers'>
               <div className='grid-item'>
                 <h4>With a total of</h4> 
@@ -133,6 +133,7 @@ function Home() {
               </div>
             </div>
         </div>
+
         <div className='ball-system'
           ref={systemRef}
           style= {{
@@ -143,7 +144,12 @@ function Home() {
               <source src={ballSystemVideo} type="video/mp4" />
           </video>
           <div></div>
-          <h2>My football predictions cover global leagues, from English Premier League to the bottom leagues of all world's countries.</h2>
+          <h2>Universal Football Fortune: Precise Global League Predictions from Every Corner of the World.</h2>
+        </div>
+
+        <div className='transparency'>
+          <div></div>
+          <h2>We provide 100% full transparency of our results, either is lost or win with 1.01 odd, the data is available and used for further analyse.</h2>
         </div>
         <Outlet/>
     </div>
