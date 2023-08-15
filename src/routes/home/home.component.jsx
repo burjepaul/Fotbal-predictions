@@ -112,7 +112,11 @@ function Home() {
               opacity:`${percentageToShow ? percentageToShow : 0}%`
           }} 
           >
-            <h2>Our platform offers curated data, automated analysis, and trends, reducing time spent on research and enhancing betting strategies for success.</h2>
+            <h2>Our platform offers curated data, automated analysis, and trends, reducing time spent on research and enhancing betting strategies for success.
+              <a href="/statistics" rel="noreferrer">
+                <button className='app-button'><p>See statistics</p></button>
+              </a>
+            </h2>
             <div className='the-four-containers'>
               <div className='grid-item'>
                 <h4>With a total of</h4> 
@@ -147,7 +151,11 @@ function Home() {
               <source src={ballSystemVideo} type="video/mp4" />
           </video>
           <div></div>
-          <h2>Universal Football Fortune: Precise Global League Predictions from Every Corner of the World.</h2>
+          <h2>Universal Football Fortune: Precise Global League Predictions from Every Corner of the World.
+            <a href="/todayMatches" rel="noreferrer">
+              <button className='app-button'><p>See Today's Picks</p></button>
+            </a>
+          </h2>
         </div>
 
         <div className='transparency-hero'
@@ -156,7 +164,11 @@ function Home() {
           opacity:`${percentageToShowTransparency ? percentageToShowTransparency : 0}%`
           }}         
         >
-          <h2>We provide 100% full transparency of our results, either is lost or win with 1.01 odd, the data is available and used for further analyse.</h2>
+          <h2>We provide 100% full transparency of our results, either is lost or win with 1.01 odd, the data is available and used for further analyse.
+            <a href="/resultHistory" rel="noreferrer">
+              <button className='app-button'><p>See All Time Results</p></button>
+            </a>
+          </h2>
           <img src={transparencyPhoto} alt='transparency-phto' className='transparency-photo'/>
         </div>
         <Outlet/>

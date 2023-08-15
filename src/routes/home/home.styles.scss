@@ -55,7 +55,7 @@
     display: flex;
     justify-content: space-around;
     max-width: 1200px;
-    margin: 8% auto 20%;
+    margin: 8% auto ;
     align-items: center;
     text-shadow: 0px 0px 1px var(--color-title);
 
@@ -63,6 +63,25 @@
         margin: 0%;
         width: 40%;
         padding-right: 5%;
+        .app-button{
+            width: 10rem;
+            border-radius: 15%;
+            border: none;
+            white-space: nowrap; 
+            display: block;
+            margin: 5% auto;
+            padding: 3%;
+            background-color: var(--color-text);
+            box-shadow: 1px 1px 6px 2px rgba(255, 255, 255, 0.2);
+            p{
+                margin: 3% 0% 0%;
+            }
+        }
+        .app-button:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+            transition: 0.5s ease-in-out;
+        }
     }
     .the-four-containers{
         width: 60%;
@@ -95,6 +114,25 @@
 
     h2{
         width: 50%;
+        .app-button{
+            width: fit-content;
+            border-radius: 15%;
+            border: none;
+            white-space: nowrap; 
+            display: block;
+            margin: 5% auto;
+            padding: 3%;
+            background-color: var(--color-text);
+            box-shadow: 1px 1px 6px 2px rgba(255, 255, 255, 0.2);
+            p{
+                margin: 3% 0% 0%;
+            }
+        }
+        .app-button:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+            transition: 0.5s ease-in-out;
+        }
     }
 
     video{
@@ -107,13 +145,32 @@
 
 .transparency-hero{
     max-width: 1200px;
-    margin: 28% auto;
+    margin: 18% auto;
     align-items: center;
     text-shadow: 0px 0px 1px var(--color-title);
     display: flex;
     
     h2{
         width: 60%;
+        .app-button{
+            width: fit-content;
+            border-radius: 15%;
+            border: none;
+            white-space: nowrap; 
+            display: block;
+            margin: 5% auto;
+            padding: 3%;
+            background-color: var(--color-text);
+            box-shadow: 1px 1px 6px 2px rgba(255, 255, 255, 0.2);
+            p{
+                margin: 3% 0% 0%;
+            }
+        }
+        .app-button:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+            transition: 0.5s ease-in-out;
+        }
     }
 
     img{
@@ -200,7 +257,7 @@
         
         img{
             margin-top: 40%;
-            height: 50vh;
+            height: 70vh;
             position: absolute;
             z-index: -1;
             right: 0;
