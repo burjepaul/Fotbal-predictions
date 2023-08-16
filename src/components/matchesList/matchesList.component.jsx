@@ -5,7 +5,6 @@ import {ReactComponent as NextPageArrow} from '../../assets/pagearrow-right.svg'
 import {ReactComponent as PreviousPageArrow} from '../../assets/pagearrow-left.svg'
 import papirusLandingMp4 from '../../assets/papirusVideo.mp4'
 import papirusLandingWebm from '../../assets/papirusVideo.webm'
-import papirusLandingOgv from '../../assets/papirusVideo.ogv'
 import SortBy from '../sortBy/sortby.component';
 import CategoryItem from '../category-item/category-item.component';
 import './matchesList.styles.scss'
@@ -127,7 +126,6 @@ const MatchesList = React.forwardRef((props, ref) => {
         <video autoPlay={true} muted={true} onEnded={()=>{setHasVideoEnded(true)}}>
           <source src={papirusLandingWebm} type="video/webm"/>
           <source src={papirusLandingMp4} type="video/mp4"/>
-          <source src={papirusLandingOgv} type="video/ogg"/>
         </video>
       </div>
       {hasVideoEnded ?

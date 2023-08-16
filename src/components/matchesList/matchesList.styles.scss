@@ -26,7 +26,7 @@
     .list-of-matches{
       height: 20vh;
       opacity: 1;
-      animation: fadeIn 2s ease-in-out forwards;
+      animation: fadeIn 1.5s ease-in-out forwards;
     }
     .pagination{
       padding-top: 3%;
@@ -49,10 +49,13 @@
         margin-bottom: 2%;
       }
     }
-  h2{ 
-    font-family: 'Baskervville', 'Amiri', serif;
-    opacity: 1;
-    animation: fadeIn 2s ease-in-out forwards;
+  .select-text{
+    h2{ 
+      margin-top:10%;
+      font-family: 'Baskervville', 'Amiri', serif;
+      opacity: 1;
+      animation: fadeIn 1s ease-in-out forwards;
+    }
   }
 }
   
