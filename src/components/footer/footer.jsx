@@ -28,9 +28,9 @@ const Footer = () => {
                         <a href="/contact">Contact</a>
                     </h5>
                 </div>
-                <div className="footer-column">
+                <div className="footer-column-odd">
                     <br/>
-                    <h5 style={{marginTop:15}}>
+                    <h5>
                         <a href="/mobile">Mobile</a>
                     </h5>
                     <h5>
