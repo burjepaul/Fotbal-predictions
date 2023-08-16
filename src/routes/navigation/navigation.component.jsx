@@ -10,6 +10,7 @@ const Navigation = () => {
     const [burger_class, setBurgerClass] = useState("burger-bar unclicked")
     const [menu_class, setMenuClass] = useState("menu hidden")
     const [isMenuClicked, setIsMenuClicked] = useState(false)
+    const [viewportWidth, setViewportWidth] = useState(window.innerWidth)
     
     const toggle_hide = () => {
         setBurgerClass("burger-bar unclicked")
@@ -28,9 +29,9 @@ const Navigation = () => {
         setIsMenuClicked(!isMenuClicked)
     }
     
-    const viewportWidth = window.innerWidth;
+    window.addEventListener('resize', () => {setViewportWidth(window.innerWidth)})
 
-    if (viewportWidth < 600 ) {
+    if (viewportWidth < 700 ) {
     return (
         <Fragment>
             <div style={{width:'100%', height:'9vh'}}>

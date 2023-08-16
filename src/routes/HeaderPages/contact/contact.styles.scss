@@ -28,8 +28,41 @@
     }
 
     .submit-contact{
-        font-size: var(--step-3);
-        margin-top: 3%;
-        padding: 1% 3%;
+        width: fit-content;
+        font-size: var(--step-2);
+        border-radius: 15%;
+        border: none;
+        white-space: nowrap; 
+        display: block;
+        margin: 5% auto;
+        padding: 2% 3%;
+        background-color: var(--color-text);
+        box-shadow: 1px 1px 6px 2px rgba(255, 255, 255, 0.2);
+        p{
+            margin: 3% 0% 0%;
+        }
+    }
+    .submit-contact:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: 0.5s ease-in-out;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .form-component{
+        .form-group-name{
+    
+            input{
+                margin-bottom: 1rem;
+                background-color: var(--color-title);
+                padding: 1rem;
+                width: 90%;
+            }
+            
+            textarea{
+                width: 90%;
+            }
+        }
     }
 }
