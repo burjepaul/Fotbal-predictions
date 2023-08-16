@@ -252,11 +252,11 @@
         
         h2{
             width: 60%;
-            margin-top: 40%;
+            margin: 20% 0%;
         }
         
         img{
-            margin-top: 40%;
+            margin: 30% 0%;
             height: 70vh;
             position: absolute;
             z-index: -1;
@@ -267,11 +267,5 @@
 
 
 @media screen and (max-width: 480px) {
-    .statistics-hero{
-        .the-four-containers{
-            grid-template-columns: repeat(1, 1fr);
-            grid-template-rows: repeat(1, 1fr); 
-        }
-    }
 
 }
