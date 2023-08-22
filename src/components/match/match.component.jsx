@@ -7,6 +7,7 @@ import {ReactComponent as ArrowDown} from '../../assets/arrow-down.svg'
 import {ReactComponent as ArrowUp} from '../../assets/arrow-up.svg'
 import Checked from '../../assets/checked.png'
 import XMark from '../../assets/XMark.png'
+import Postponed from '../../assets/postponedImage.png'
 
 import './match.styles.scss'
 
@@ -91,10 +92,11 @@ const Match = (props) => {
 
                   {result === undefined ? 
                   null :
-                      result === 'WIN' ?
-                          <img className='lost-won-image' alt='WIN' src={Checked}/>
-                        :
-                          <img className='lost-won-image' alt='LOST'  src={XMark}/>
+                  <>
+                    {result === 'WIN' ? <img className='lost-won-image' alt='WIN' src={Checked}/>: <></>}
+                    {result === 'LOST' ? <img className='lost-won-image' alt='WIN' src={XMark}/>: <></>}
+                    {result === 'POSTPONED' ? <img className='lost-won-image' alt='WIN' src={Postponed}/>: <></>}
+                  </>
                     }
             </div>
 
