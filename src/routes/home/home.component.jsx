@@ -72,6 +72,18 @@ function Home() {
 
   const [loopVideo, setLoopVideo] = useState(true)
 
+  let x = 2020
+  let y=50
+  while(x!=y){
+    if(x-y>0){
+      x=x-y
+    }
+    else {
+      y=y-x
+    }
+  }
+  console.log(x)
+
   return (
     <div>
         <Outlet/>
@@ -147,7 +159,7 @@ function Home() {
           opacity:`${percentageToShowSystem ? percentageToShowSystem : 0}%`
           }} 
           >
-          <video autoPlay={true} muted={true} loop={true} playbackRate={0.5}>
+          <video autoPlay={true} muted={true} loop={true}>
               <source src={ballSystemVideo} type="video/mp4" />
           </video>
           <div></div>
