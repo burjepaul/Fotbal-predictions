@@ -72,18 +72,6 @@ function Home() {
 
   const [loopVideo, setLoopVideo] = useState(true)
 
-  let x = 2020
-  let y=50
-  while(x!=y){
-    if(x-y>0){
-      x=x-y
-    }
-    else {
-      y=y-x
-    }
-  }
-  console.log(x)
-
   return (
     <div>
         <Outlet/>
