@@ -33,16 +33,16 @@ const Mobile = () => {
             <div className="mobile-screenshots-container">
                 <div className="mobile-screenshots-row">
                     <img src={image1} alt="mobile"/>
-                    <h1>ew</h1>
+                    <h1></h1>
                 </div>
-                <div className="mobile-screenshots-row">
-                <h1>ew</h1>
+                <div className="mobile-screenshots-row" style={{marginTop:-200}}>
+                    <h1></h1>
                     <img src={image2} alt="mobile"/>
 
                 </div>
-                <div className="mobile-screenshots-row">
+                <div className="mobile-screenshots-row" style={{marginTop:-200}}>
                     <img src={image3} alt="mobile"/>
-                    <h1>ew</h1>
+                    <h1></h1>
                 </div>
             </div>
         </div>

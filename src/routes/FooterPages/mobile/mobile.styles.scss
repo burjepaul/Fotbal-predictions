@@ -2,8 +2,10 @@
     display: flex;
     .video-and-text-container{
         width: 50%;
+        margin-top: 20%;
         video{
             width: 90%;
+            margin-top: -15%;
             height: 55vh;
         }
         
@@ -47,11 +49,28 @@
     
     .mobile-screenshots-row{
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         img{
-            height: 50vh;
+            height: 60vh;
             border-radius: 5%;
         }
     }
+}
+}
+@media screen and (max-width: 700px) {
+    .mobile-page-container{
+        display: block;
+        .video-and-text-container{
+            overflow-x: hidden;
+            width: 100%;
+            video{
+                width: 120%;
+                margin-top: -35%;
+                height: 55vh;
+            }
+        }
+        .mobile-screenshots-container{
+            width: 100%;
+        }
 }
 }
