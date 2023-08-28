@@ -31,18 +31,15 @@ const Mobile = () => {
 
             </div>
             <div className="mobile-screenshots-container">
-                <div className="mobile-screenshots-row">
+                <div className="mobile-screenshots-row" style={{marginRight:50}}>
                     <img src={image1} alt="mobile"/>
-                    <h1></h1>
                 </div>
-                <div className="mobile-screenshots-row" style={{marginTop:-200}}>
-                    <h1></h1>
+                <div className="mobile-screenshots-row" style={{marginTop:-200, marginRight:250}}>
                     <img src={image2} alt="mobile"/>
 
                 </div>
-                <div className="mobile-screenshots-row" style={{marginTop:-200}}>
+                <div className="mobile-screenshots-row" style={{marginTop:-200, marginLeft:150}}>
                     <img src={image3} alt="mobile"/>
-                    <h1></h1>
                 </div>
             </div>
         </div>
