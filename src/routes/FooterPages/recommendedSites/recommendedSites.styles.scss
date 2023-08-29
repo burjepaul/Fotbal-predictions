@@ -1,0 +1,27 @@
+.sites-container{
+    padding: 0% 15%;
+    display: flex;
+    justify-content: space-between;
+
+    .recommended-subtitle{
+        font-size: var(--step-4);
+        color: var(--color-text);
+        font-weight: bold;
+        text-align:start;
+        border-bottom: 1px solid var(--color-title);
+        margin-top: 25%;
+    }
+
+    a{
+        p{
+            font-size: var(--step-2);
+            text-shadow: 0px 0px 1px var(--color-title);
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .sites-container{
+        display: block;
+    }
+}
