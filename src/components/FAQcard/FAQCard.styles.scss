@@ -1,0 +1,15 @@
+.faqCard{
+    max-width: 1200px;
+    margin: 3% auto 0%;
+    align-items: center;
+
+    .question{
+        color:var(--color-title)
+    }
+    
+    .answer{
+        color:var(--color-text);
+        text-shadow: 0px 0px 0.5px var(--color-title);
+    }
+
+}
